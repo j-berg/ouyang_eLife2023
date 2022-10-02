@@ -1,0 +1,11 @@
+WT_1	WT
+WT_2	WT
+WT_3	WT
+mct1_1	mct1
+mct1_2	mct1
+mct1_3	mct1
+mpc1_1	mpc1
+mpc1_2	mpc1
+mpc1_3	mpc1
+WT_starv_1	wt_starv
+WT_starv_2	wt_starv

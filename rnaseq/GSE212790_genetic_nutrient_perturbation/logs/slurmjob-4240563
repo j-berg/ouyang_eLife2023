@@ -1,0 +1,1335 @@
++ Checking CUDA devices...
+Devices: 
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+
+No. CPUs: 64
+Testing installs...
+channels:
+  - defaults
+# packages in environment at /uufs/chpc.utah.edu/common/home/u0690617/miniconda3/envs/xpresspipe2:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                       1_gnu    conda-forge
+_r-mutex                  1.0.0               anacondar_1  
+alabaster                 0.7.12                   py37_0  
+arpack                    3.6.3             h323e27b_1006    conda-forge
+asn1crypto                1.4.0                      py_0  
+babel                     2.9.1              pyhd3eb1b0_0  
+bedtools                  2.30.0               h7d7f7ad_2    bioconda
+bioconductor-annotate     1.58.0                   r341_0    bioconda
+bioconductor-annotationdbi 1.42.1                   r341_0    bioconda
+bioconductor-apeglm       1.2.1            r341hfc679d8_0    bioconda
+bioconductor-biobase      2.40.0           r341h470a237_0    bioconda
+bioconductor-biocgenerics 0.26.0                   r341_0    bioconda
+bioconductor-biocparallel 1.14.2           r341h26a2512_0    bioconda
+bioconductor-biomart      2.36.1                   r341_0    bioconda
+bioconductor-biostrings   2.48.0           r341h470a237_0    bioconda
+bioconductor-delayedarray 0.6.6                    r341_0    bioconda
+bioconductor-deseq2       1.20.0           r341hfc679d8_0    bioconda
+bioconductor-dupradar     1.10.0                   r341_0    bioconda
+bioconductor-genefilter   1.62.0           r341h26a2512_0    bioconda
+bioconductor-geneplotter  1.58.0                   r341_0    bioconda
+bioconductor-genomeinfodb 1.16.0                   r341_0    bioconda
+bioconductor-genomeinfodbdata 1.1.0                    r341_0    bioconda
+bioconductor-genomicalignments 1.16.0           r341h470a237_0    bioconda
+bioconductor-genomicfeatures 1.32.3                   r341_0    bioconda
+bioconductor-genomicranges 1.32.7           r341h470a237_0    bioconda
+bioconductor-iranges      2.14.12          r341h470a237_0    bioconda
+bioconductor-rsamtools    1.32.3           r341hfc679d8_0    bioconda
+bioconductor-rsubread     1.30.9           r341h470a237_0    bioconda
+bioconductor-rtracklayer  1.40.6           r341h470a237_0    bioconda
+bioconductor-s4vectors    0.18.3           r341h470a237_0    bioconda
+bioconductor-summarizedexperiment 1.10.1                   r341_0    bioconda
+bioconductor-xvector      0.20.0           r341h470a237_0    bioconda
+bioconductor-zlibbioc     1.26.0           r341h470a237_0    bioconda
+biopython                 1.78             py37h7f8727e_0  
+blas                      1.0                    openblas  
+bottleneck                1.3.2            py37heb32a55_1  
+brotlipy                  0.7.0           py37h27cfd23_1003  
+bzip2                     1.0.8                h7b6447c_0  
+ca-certificates           2021.9.30            h06a4308_1  
+cairo                     1.14.12              h8948797_3  
+certifi                   2021.10.8        py37h06a4308_0  
+cffi                      1.14.0           py37h2e261b9_0  
+charset-normalizer        2.0.4              pyhd3eb1b0_0  
+click                     8.0.1              pyhd3eb1b0_0  
+codecov                   2.1.11             pyhd3eb1b0_0  
+colorama                  0.4.4              pyhd3eb1b0_0  
+coloredlogs               15.0.1           py37h06a4308_0  
+colormath                 3.0.0                      py_2    conda-forge
+commonmark                0.9.1              pyhd3eb1b0_0  
+coverage                  5.5              py37h27cfd23_2  
+cryptography              2.3.1            py37hc365091_0  
+curl                      7.61.0               h84994c4_0  
+cycler                    0.10.0                   py37_0  
+dbus                      1.13.18              hb2f20db_0  
+docutils                  0.17.1           py37h06a4308_1  
+expat                     2.4.1                h2531618_2  
+fastp                     0.22.0               h2e03b76_0    bioconda
+fastqc                    0.11.9               hdfd78af_1    bioconda
+fftw                      3.3.9                h27cfd23_1  
+font-ttf-dejavu-sans-mono 2.37                 hd3eb1b0_0  
+fontconfig                2.13.1               h6c09931_0  
+freetype                  2.10.4               h5ab3b9f_0  
+future                    0.18.2                   py37_1  
+glib                      2.56.2               hd408876_0  
+gmp                       6.2.1                h2531618_2  
+graphite2                 1.3.14               h23475e2_0  
+gsl                       2.2.1                h0c605f7_3  
+gst-plugins-base          1.14.0               hbbd80ab_1  
+gstreamer                 1.14.0               hb453b48_1  
+harfbuzz                  1.9.0             he243708_1001    conda-forge
+htseq                     0.13.5           py37h9c5868f_1    bioconda
+humanfriendly             9.2              py37h06a4308_0  
+icu                       58.2                 he6710b0_3  
+idna                      3.2                pyhd3eb1b0_0  
+imagesize                 1.2.0              pyhd3eb1b0_0  
+importlib-metadata        4.8.1            py37h06a4308_0  
+jinja2                    3.0.1              pyhd3eb1b0_0  
+joblib                    1.0.1              pyhd3eb1b0_0  
+jpeg                      9d                   h7f8727e_0  
+julia                     1.0.3           blas_openblash12d65f3_2    conda-forge
+kiwisolver                1.3.1            py37h2531618_0  
+krb5                      1.14.6                        0    conda-forge
+libblas                   3.9.0           1_h6e990d7_netlib    conda-forge
+libcurl                   7.61.0               h1ad7b7a_0  
+libdeflate                1.6                  h516909a_0    conda-forge
+libedit                   3.1.20210714         h7f8727e_0  
+libffi                    3.2.1             hf484d3e_1007  
+libgcc                    7.2.0                h69d50b8_2  
+libgcc-ng                 11.2.0              h1d223b6_11    conda-forge
+libgfortran               3.0.0                         1    conda-forge
+libgfortran-ng            7.5.0               ha8ba4b0_17  
+libgfortran4              7.5.0               ha8ba4b0_17  
+libgit2                   0.28.1               hbd8068c_0    conda-forge
+libgomp                   11.2.0              h1d223b6_11    conda-forge
+libiconv                  1.15                 h63c8f33_5  
+liblapack                 3.9.0           3_h893e4fe_netlib    conda-forge
+libopenblas               0.3.3                h5a2b251_3  
+libpng                    1.6.37               hbc83047_0  
+libssh2                   1.8.0                h9cfc8f7_4  
+libstdcxx-ng              11.2.0              he4da1e4_11    conda-forge
+libtiff                   4.2.0                h85742a9_0  
+libuuid                   1.0.3                h7f8727e_2  
+libwebp-base              1.2.0                h27cfd23_0  
+libxcb                    1.14                 h7b6447c_0  
+libxml2                   2.9.12               h03d6c58_0  
+lz4-c                     1.9.3                h295c915_1  
+lzstring                  1.0.4                   py_1001    conda-forge
+markdown                  3.3.4            py37h06a4308_0  
+markupsafe                2.0.1            py37h27cfd23_0  
+matplotlib                2.2.3            py37hb69df0a_0  
+matplotlib-base           2.2.4            py37hfd891ef_0    conda-forge
+metis                     5.1.0                hf484d3e_4  
+mpfr                      4.0.2                hb69a4c5_1  
+multiqc                   1.11               pyhdfd78af_0    bioconda
+ncurses                   6.2                  he6710b0_1  
+networkx                  2.6.3              pyhd3eb1b0_0  
+nomkl                     3.0                           0  
+numexpr                   2.7.3            py37h4be448d_1  
+numpy                     1.21.2           py37hd8d4704_0  
+numpy-base                1.21.2           py37h2b8c604_0  
+numpydoc                  1.1.0              pyhd3eb1b0_1  
+openblas                  0.3.3                         3  
+openblas-devel            0.3.3                         3  
+openjdk                   8.0.152              h7b6447c_3  
+openlibm                  0.5.4             h14c3975_1000    conda-forge
+openspecfun               0.5.3             hc99cbb1_1002    conda-forge
+openssl                   1.0.2u               h7b6447c_0  
+packaging                 21.0               pyhd3eb1b0_0  
+pandas                    1.3.3            py37h8c16a72_0  
+pandoc                    2.12                 h06a4308_0  
+pango                     1.40.14           hf0c64fd_1003    conda-forge
+patsy                     0.5.2            py37h06a4308_0  
+pcre                      8.45                 h295c915_0  
+pcre2                     10.23                         2    conda-forge
+perl                      5.26.2               h14c3975_0  
+pip                       21.2.2           py37h06a4308_0  
+pixman                    0.40.0               h7f8727e_1  
+plotly                    5.1.0              pyhd3eb1b0_0  
+plotly_express            0.4.1                      py_0    conda-forge
+psutil                    5.8.0            py37h27cfd23_1  
+pybktree                  1.1                pyh9f0ad1d_0    conda-forge
+pycparser                 2.20                       py_2  
+pygments                  2.10.0             pyhd3eb1b0_0  
+pyopenssl                 19.0.0                   py37_0  
+pyparsing                 2.4.7              pyhd3eb1b0_0  
+pyqt                      5.9.2            py37h05f1152_2  
+pysam                     0.16.0           py37ha9a96c6_0    bioconda
+pysocks                   1.7.1                    py37_1  
+python                    3.7.0                h6e4f718_3  
+python-dateutil           2.8.2              pyhd3eb1b0_0  
+python_abi                3.7                     2_cp37m    conda-forge
+pytz                      2021.3             pyhd3eb1b0_0  
+pyyaml                    5.4.1            py37h27cfd23_1  
+qt                        5.9.6                h8703b6f_2  
+r-acepack                 1.4.1                  r3.4.1_0  
+r-assertthat              0.2.0                  r3.4.1_0  
+r-backports               1.1.0                  r3.4.1_0  
+r-base                    3.4.1                h4fe35fd_8    conda-forge
+r-base64enc               0.1_3                  r3.4.1_0  
+r-bbmle                   1.0.19                   r341_1    conda-forge
+r-bh                      1.62.0_1               r3.4.1_0  
+r-bit                     1.1_12                 r3.4.1_0  
+r-bit64                   0.9_7                  r3.4.1_0  
+r-bitops                  1.0_6                  r3.4.1_2  
+r-blob                    1.1.1                    r341_1    conda-forge
+r-checkmate               1.8.2                  r3.4.1_0  
+r-cluster                 2.0.6                  r3.4.1_0  
+r-coda                    0.19_1                 r3.4.1_0  
+r-colorspace              1.3_2                  r3.4.1_0  
+r-crayon                  1.3.2                  r3.4.1_0  
+r-curl                    2.6                    r3.4.1_0  
+r-data.table              1.10.4                 r3.4.1_0  
+r-dbi                     0.6_1                  r3.4.1_0  
+r-dichromat               2.0_0                  r3.4.1_2  
+r-digest                  0.6.12                 r3.4.1_0  
+r-emdbook                 1.3.10                   r341_1    conda-forge
+r-evaluate                0.10                   r3.4.1_0  
+r-foreign                 0.8_68                 r3.4.1_0  
+r-formatr                 1.5                    r3.4.1_0  
+r-formula                 1.2_1                  r3.4.1_0  
+r-futile.logger           1.4.3            r341h6115d3f_1    conda-forge
+r-futile.options          1.0.1            r341h6115d3f_0    conda-forge
+r-ggplot2                 2.2.1                  r3.4.1_0  
+r-gridextra               2.2.1                  r3.4.1_0  
+r-gtable                  0.2.0                  r3.4.1_0  
+r-highr                   0.6                    r3.4.1_0  
+r-hmisc                   4.0_3                  r3.4.1_0  
+r-hms                     0.3                    r3.4.1_0  
+r-htmltable               1.9                    r3.4.1_0  
+r-htmltools               0.3.6                  r3.4.1_0  
+r-htmlwidgets             0.8                    r3.4.1_1  
+r-httr                    1.2.1                  r3.4.1_0  
+r-jsonlite                1.5                    r3.4.1_0  
+r-knitr                   1.16                   r3.4.1_0  
+r-labeling                0.3                    r3.4.1_2  
+r-lambda.r                1.2.3            r341h6115d3f_0    conda-forge
+r-lattice                 0.20_35                r3.4.1_0  
+r-latticeextra            0.6_28                 r3.4.1_0  
+r-lazyeval                0.2.0                  r3.4.1_0  
+r-locfit                  1.5_9.1          r341h470a237_2    conda-forge
+r-magrittr                1.5                    r3.4.1_2  
+r-markdown                0.8                    r3.4.1_0  
+r-mass                    7.3_47                 r3.4.1_0  
+r-matrix                  1.2_10                 r3.4.1_0  
+r-matrixstats             0.54.0           r341hc070d10_0    conda-forge
+r-memoise                 1.1.0                  r3.4.1_0  
+r-mime                    0.5                    r3.4.1_0  
+r-munsell                 0.4.3                  r3.4.1_0  
+r-nnet                    7.3_12                 r3.4.1_0  
+r-numderiv                2016.8_1               r3.4.1_0  
+r-openssl                 0.9.6                  r3.4.1_0  
+r-pkgconfig               2.0.1                  r3.4.1_0  
+r-plogr                   0.1_1                  r3.4.1_0  
+r-plyr                    1.8.4                  r3.4.1_0  
+r-prettyunits             1.0.2            r341h6115d3f_1    conda-forge
+r-progress                1.2.0            r341h6115d3f_2    conda-forge
+r-r6                      2.2.1                  r3.4.1_0  
+r-rcolorbrewer            1.1_2                  r3.4.1_3  
+r-rcpp                    0.12.11                r3.4.1_0  
+r-rcpparmadillo           0.7.900.2.0            r3.4.1_0  
+r-rcppeigen               0.3.3.3.0              r3.4.1_0  
+r-rcppnumerical           0.3_2            r341h9d2a408_0    conda-forge
+r-rcurl                   1.95_4.8               r3.4.1_0  
+r-reshape2                1.4.2                  r3.4.1_0  
+r-rlang                   0.1.1                  r3.4.1_0  
+r-rpart                   4.1_11                 r3.4.1_0  
+r-rsqlite                 2.0              r341hfc679d8_1    conda-forge
+r-scales                  0.4.1                  r3.4.1_0  
+r-snow                    0.4_3            r341h6115d3f_0    conda-forge
+r-stringi                 1.1.5                  r3.4.1_0  
+r-stringr                 1.2.0                  r3.4.1_0  
+r-survival                2.41_3                 r3.4.1_0  
+r-tibble                  1.3.3                  r3.4.1_0  
+r-viridis                 0.4.0                  r3.4.1_0  
+r-viridislite             0.2.0                  r3.4.1_0  
+r-xml                     3.98_1.7               r3.4.1_0  
+r-xtable                  1.8_2                  r3.4.1_0  
+r-yaml                    2.1.14                 r3.4.1_0  
+readline                  7.0                  h7b6447c_5  
+regex                     2021.8.3         py37h7f8727e_0  
+requests                  2.26.0             pyhd3eb1b0_0  
+rich                      10.12.0          py37h89c1867_0    conda-forge
+samtools                  1.7                           1    bioconda
+scikit-learn              0.24.2           py37ha9443f7_0  
+scipy                     1.7.1            py37hc65b3f8_2  
+seaborn                   0.11.2             pyhd3eb1b0_0  
+setuptools                58.0.4           py37h06a4308_0  
+simplejson                3.17.3           py37h7f8727e_2  
+sip                       4.19.8           py37hf484d3e_0  
+six                       1.15.0           py37h06a4308_0  
+snowballstemmer           2.1.0              pyhd3eb1b0_0  
+spectra                   0.0.11                     py_1    conda-forge
+sphinx                    4.2.0              pyhd3eb1b0_0  
+sphinxcontrib-applehelp   1.0.2              pyhd3eb1b0_0  
+sphinxcontrib-devhelp     1.0.2              pyhd3eb1b0_0  
+sphinxcontrib-htmlhelp    2.0.0              pyhd3eb1b0_0  
+sphinxcontrib-jsmath      1.0.1              pyhd3eb1b0_0  
+sphinxcontrib-qthelp      1.0.3              pyhd3eb1b0_0  
+sphinxcontrib-serializinghtml 1.1.5              pyhd3eb1b0_0  
+sqlite                    3.33.0               h62c20be_0  
+star                      2.7.9a               h9ee0642_0    bioconda
+statsmodels               0.12.2           py37h27cfd23_0  
+suitesparse               5.2.0                h2ffa06c_0  
+tbb                       2021.4.0             hd09550d_0  
+tenacity                  8.0.1            py37h06a4308_0  
+threadpoolctl             2.2.0              pyh0d69192_0  
+tk                        8.6.11               h1ccaba5_0  
+tornado                   6.1              py37h27cfd23_0  
+typing_extensions         3.10.0.2           pyh06a4308_0  
+umi_tools                 1.1.0            py37hf01694f_0    bioconda
+urllib3                   1.26.7             pyhd3eb1b0_0  
+wget                      1.19.5               h1ad7b7a_0  
+wheel                     0.37.0             pyhd3eb1b0_1  
+xorg-kbproto              1.0.7             h7f98852_1002    conda-forge
+xorg-libice               1.0.10               h7f98852_0    conda-forge
+xorg-libsm                1.2.2                h470a237_5    conda-forge
+xorg-libx11               1.7.2                h7f98852_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xorg-libxext              1.3.4                h7f98852_1    conda-forge
+xorg-libxrender           0.9.10            h7f98852_1003    conda-forge
+xorg-libxt                1.2.1                h7f98852_2    conda-forge
+xorg-renderproto          0.11.1            h7f98852_1002    conda-forge
+xorg-xextproto            7.3.0             h7f98852_1002    conda-forge
+xorg-xproto               7.0.31            h27cfd23_1007  
+xpresspipe                0.6.3                    pypi_0    pypi
+xpressplot                0.2.5              pyh4c3bd37_1    bioconda
+xz                        5.2.5                h7b6447c_0  
+yaml                      0.2.5                h7b6447c_0  
+zipp                      3.6.0              pyhd3eb1b0_0  
+zlib                      1.2.11               h7b6447c_3  
+zstd                      1.4.9                haebb681_0  
+Building genome index
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 71530  100 71530    0     0  59262      0  0:00:01  0:00:01 --:--:-- 59213100 71530  100 71530    0     0  59262      0  0:00:01  0:00:01 --:--:-- 59213
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 73  248k   73  183k    0     0   167k      0  0:00:01  0:00:01 --:--:--  167k100  248k  100  248k    0     0   183k      0  0:00:01  0:00:01 --:--:--  183k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 81 99014   81 81044    0     0   116k      0 --:--:-- --:--:-- --:--:--  116k100 99014  100 99014    0     0   120k      0 --:--:-- --:--:-- --:--:--  119k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 43  464k   43  202k    0     0   244k      0  0:00:01 --:--:--  0:00:01  244k100  464k  100  464k    0     0   422k      0  0:00:01  0:00:01 --:--:--  422k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 96  176k   96  169k    0     0   234k      0 --:--:-- --:--:-- --:--:--  234k100  176k  100  176k    0     0   243k      0 --:--:-- --:--:-- --:--:--  243k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 84644  100 84644    0     0   180k      0 --:--:-- --:--:-- --:--:--  180k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 30  332k   30  102k    0     0   180k      0  0:00:01 --:--:--  0:00:01  180k100  332k  100  332k    0     0   397k      0 --:--:-- --:--:-- --:--:--  397k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 89  171k   89  152k    0     0   214k      0 --:--:-- --:--:-- --:--:--  214k100  171k  100  171k    0     0   240k      0 --:--:-- --:--:-- --:--:--  240k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  134k  100  134k    0     0   233k      0 --:--:-- --:--:-- --:--:--  233k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 20  226k   20 46831    0     0   105k      0  0:00:02 --:--:--  0:00:02  104k100  226k  100  226k    0     0   324k      0 --:--:-- --:--:-- --:--:--  324k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 76  203k   76  155k    0     0   225k      0 --:--:-- --:--:-- --:--:--  225k100  203k  100  203k    0     0   294k      0 --:--:-- --:--:-- --:--:--  294k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  323k  100  323k    0     0   452k      0 --:--:-- --:--:-- --:--:--  452k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3  281k    3 11115    0     0  33478      0  0:00:08 --:--:--  0:00:08 33378100  281k  100  281k    0     0   333k      0 --:--:-- --:--:-- --:--:--  333k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 22  239k   22 56003    0     0   123k      0  0:00:01 --:--:--  0:00:01  122k100  239k  100  239k    0     0   337k      0 --:--:-- --:--:-- --:--:--  337k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 57  333k   57  191k    0     0   268k      0  0:00:01 --:--:--  0:00:01  268k100  333k  100  333k    0     0   394k      0 --:--:-- --:--:-- --:--:--  393k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 90  289k   90  262k    0     0   312k      0 --:--:-- --:--:-- --:--:--  312k100  289k  100  289k    0     0   343k      0 --:--:-- --:--:-- --:--:--  343k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 22560  100 22560    0     0  71847      0 --:--:-- --:--:-- --:--:-- 71847
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 16  571k   16 97640    0     0   158k      0  0:00:03 --:--:--  0:00:03  158k100  571k  100  571k    0     0   432k      0  0:00:01  0:00:01 --:--:--  432k
+/uufs/notchpeak.peaks/sys/var/slurm/slurmd.spool/notch017//job4240563/slurm_script: line 64: cd: /scratch/general/lustre/u0690617/4240563: No such file or directory
+Building STAR index...
+
+You are using the current version of XPRESSpipe...
+======================
+User commands summary:
+======================
+XPRESSpipe version: 0.6.3
+cmd: makeReference
+output: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/
+fasta: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/genome_fastas
+gtf: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/transcripts.gtf
+suppress_version_check: False
+sjdbOverhang: 149
+genome_size: 10
+max_processors: 64
+path: /uufs/chpc.utah.edu/common/home/u0690617/miniconda3/envs/xpresspipe2/lib/python3.7/site-packages/xpresspipe/
+log_loc: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/
+experiment: makeReference_2022_4_13_21h_47m_41s
+log:  >> /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/makeReference_2022_4_13_21h_47m_41s.log 2>&1
+log_file: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/makeReference_2022_4_13_21h_47m_41s.log
+=====================
+End commands summary
+=====================
+
+Creating reference files...
+Process complete.
+************************
+    
+Processing sequence files...
+
+You are using the current version of XPRESSpipe...
+======================
+User commands summary:
+======================
+XPRESSpipe version: 0.6.3
+cmd: peRNAseq
+input: /scratch/general/lustre/u0690617/4240563/input_files/
+output: /scratch/general/lustre/u0690617/4240563/output_files/
+reference: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/
+gtf: /uufs/chpc.utah.edu/common/home/rutter-group2/j-berg/yeyun_2022_04_13_novogene/index_files/transcripts.gtf
+experiment: yeyun_rnaseq
+suppress_version_check: False
+small_output: False
+two_pass: False
+adapters: ['AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT', 'GATCGGAAGAGCACACGTCTGAACTCCAGTCACGGATGACTATCTCGTATGCCGTCTTCTGCTTG']
+quality: 28
+min_length: 17
+max_length: 0
+remove_rrna: True
+front_trim: 1
+umi_location: none
+umi_length: 0
+spacer_length: 0
+no_multimappers: False
+deduplicate: False
+output_bed: False
+quantification_method: htseq
+feature_type: exon
+stranded: no
+method: None
+vcf: None
+batch: None
+sjdbOverhang: 149
+mismatchRatio: 0.1
+seedSearchStartLmax: 50
+genome_size: 14
+gene_name: GAPDH
+smoothen: False
+max_processors: 64
+path: /uufs/chpc.utah.edu/common/home/u0690617/miniconda3/envs/xpresspipe2/lib/python3.7/site-packages/xpresspipe/
+log_loc: /scratch/general/lustre/u0690617/4240563/output_files/
+log:  >> /scratch/general/lustre/u0690617/4240563/output_files/yeyun_rnaseq.log 2>&1
+log_file: /scratch/general/lustre/u0690617/4240563/output_files/yeyun_rnaseq.log
+=====================
+End commands summary
+=====================
+
+
+XPRESSpipe initialized...
+    
+Adaptor and quality trimming...
+
+  _       ,/'
+ (_).  ,/'
+  __  ::
+ (__)'  `\.
+           `\.
+       
+Resetting parallelization specs based on max file size to be processed:
+Max number of workers: 21
+Number of threads per worker (where available): 3
+Pro_noN_1_1.fq has been processed.
+Pro_noN_2_1.fq has been processed.
+Pro_noN_3_1.fq has been processed.
+Pro_wN_1_1.fq has been processed.
+Pro_wN_2_1.fq has been processed.
+Pro_wN_3_1.fq has been processed.
+WT_1_1.fq has been processed.
+WT_2_1.fq has been processed.
+WT_3_1.fq has been processed.
+WT_Pi_1_1.fq has been processed.
+WT_Pi_2_1.fq has been processed.
+WT_Pi_3_1.fq has been processed.
+WT_SD_1_1.fq has been processed.
+WT_SD_2_1.fq has been processed.
+WT_SD_3_1.fq has been processed.
+WT_noPi_1_1.fq has been processed.
+WT_noPi_2_1.fq has been processed.
+WT_noPi_3_1.fq has been processed.
+WT_noURA_1_1.fq has been processed.
+WT_noURA_2_1.fq has been processed.
+WT_noURA_3_1.fq has been processed.
+Processing of batch 1 of 2 complete...
+bar1_1_1.fq has been processed.
+bar1_2_1.fq has been processed.
+bar1_3_1.fq has been processed.
+bar1_aF_1_1.fq has been processed.
+bar1_aF_2_1.fq has been processed.
+bar1_aF_3_1.fq has been processed.
+pho85_1_1.fq has been processed.
+pho85_2_1.fq has been processed.
+pho85_3_1.fq has been processed.
+rpo41_1_1.fq has been processed.
+rpo41_2_1.fq has been processed.
+rpo41_3_1.fq has been processed.
+rpopho_1_1.fq has been processed.
+rpopho_2_1.fq has been processed.
+rpopho_3_1.fq has been processed.
+Processing of batch 2 of 2 complete...
+Process complete.
+************************
+    
+
+Running some QC on trimmed reads...
+
+Resetting parallelization specs based on max file size to be processed:
+Max number of workers: 21
+Number of threads per worker (where available): 3
+trimmed_Pro_noN_1_1.fq has been processed.
+trimmed_Pro_noN_1_2.fq has been processed.
+trimmed_Pro_noN_2_1.fq has been processed.
+trimmed_Pro_noN_2_2.fq has been processed.
+trimmed_Pro_noN_3_1.fq has been processed.
+trimmed_Pro_noN_3_2.fq has been processed.
+trimmed_Pro_wN_1_1.fq has been processed.
+trimmed_Pro_wN_1_2.fq has been processed.
+trimmed_Pro_wN_2_1.fq has been processed.
+trimmed_Pro_wN_2_2.fq has been processed.
+trimmed_Pro_wN_3_1.fq has been processed.
+trimmed_Pro_wN_3_2.fq has been processed.
+trimmed_WT_1_1.fq has been processed.
+trimmed_WT_1_2.fq has been processed.
+trimmed_WT_2_1.fq has been processed.
+trimmed_WT_2_2.fq has been processed.
+trimmed_WT_3_1.fq has been processed.
+trimmed_WT_3_2.fq has been processed.
+trimmed_WT_Pi_1_1.fq has been processed.
+trimmed_WT_Pi_1_2.fq has been processed.
+trimmed_WT_Pi_2_1.fq has been processed.
+Processing of batch 1 of 4 complete...
+trimmed_WT_Pi_2_2.fq has been processed.
+trimmed_WT_Pi_3_1.fq has been processed.
+trimmed_WT_Pi_3_2.fq has been processed.
+trimmed_WT_SD_1_1.fq has been processed.
+trimmed_WT_SD_1_2.fq has been processed.
+trimmed_WT_SD_2_1.fq has been processed.
+trimmed_WT_SD_2_2.fq has been processed.
+trimmed_WT_SD_3_1.fq has been processed.
+trimmed_WT_SD_3_2.fq has been processed.
+trimmed_WT_noPi_1_1.fq has been processed.
+trimmed_WT_noPi_1_2.fq has been processed.
+trimmed_WT_noPi_2_1.fq has been processed.
+trimmed_WT_noPi_2_2.fq has been processed.
+trimmed_WT_noPi_3_1.fq has been processed.
+trimmed_WT_noPi_3_2.fq has been processed.
+trimmed_WT_noURA_1_1.fq has been processed.
+trimmed_WT_noURA_1_2.fq has been processed.
+trimmed_WT_noURA_2_1.fq has been processed.
+trimmed_WT_noURA_2_2.fq has been processed.
+trimmed_WT_noURA_3_1.fq has been processed.
+trimmed_WT_noURA_3_2.fq has been processed.
+Processing of batch 2 of 4 complete...
+trimmed_bar1_1_1.fq has been processed.
+trimmed_bar1_1_2.fq has been processed.
+trimmed_bar1_2_1.fq has been processed.
+trimmed_bar1_2_2.fq has been processed.
+trimmed_bar1_3_1.fq has been processed.
+trimmed_bar1_3_2.fq has been processed.
+trimmed_bar1_aF_1_1.fq has been processed.
+trimmed_bar1_aF_1_2.fq has been processed.
+trimmed_bar1_aF_2_1.fq has been processed.
+trimmed_bar1_aF_2_2.fq has been processed.
+trimmed_bar1_aF_3_1.fq has been processed.
+trimmed_bar1_aF_3_2.fq has been processed.
+trimmed_pho85_1_1.fq has been processed.
+trimmed_pho85_1_2.fq has been processed.
+trimmed_pho85_2_1.fq has been processed.
+trimmed_pho85_2_2.fq has been processed.
+trimmed_pho85_3_1.fq has been processed.
+trimmed_pho85_3_2.fq has been processed.
+trimmed_rpo41_1_1.fq has been processed.
+trimmed_rpo41_1_2.fq has been processed.
+trimmed_rpo41_2_1.fq has been processed.
+Processing of batch 3 of 4 complete...
+trimmed_rpo41_2_2.fq has been processed.
+trimmed_rpo41_3_1.fq has been processed.
+trimmed_rpo41_3_2.fq has been processed.
+trimmed_rpopho_1_1.fq has been processed.
+trimmed_rpopho_1_2.fq has been processed.
+trimmed_rpopho_2_1.fq has been processed.
+trimmed_rpopho_2_2.fq has been processed.
+trimmed_rpopho_3_1.fq has been processed.
+trimmed_rpopho_3_2.fq has been processed.
+Processing of batch 4 of 4 complete...
+Aligning...
+
+                                                     __________
+|             _,---.                          _..--'/          \              |
+|          ,-'      )                    _,-,'     /            \             |
+|         (          )               _,-'  /      /              \            |
+|          `-.__, -'             _,-/     /     _/ ,------------. \           |
+|     ,--._,---.             _,-'  /     /_,--'' | |            | |           |
+|   _(_,-'      )        _,-'/    /_, - '|       | |   XPRESS   | |           |
+| ,'  (        )      ,'/   /_, -'|      ||_  -  | |            | |           |
+|(     `--._,-'    _,' /_,-'|     ||_  - |       | |  yourself  | |           |
+| `--.__,-'     _,'/,-'|  - ||_ - |      ||_  -  | |            | |           |
+|            _,'/,'|  - ___ |     ||_  - |       | `------------' |           |
+|        _ ,' |_' -|- _(   ) |_   |      ||_  -  |                |           |
+|       ( ): ((`) -| (. `-/ )   - ||_  - |       |                |           |
+|      ` | '(-.,') '( _\`/-') _ - |      | _   - |                |           |
+|        `   (_.) -(_._|,-_)      ||_  - |       |                |           |
+| .        `. || ` | (_\||_)  _ - |      ||_  -  |                |           |
+|             `.    ` . ||  |   - ||_  - |       |                |           |
+|                `.     ||-.|  :  |  _   ||_   - |     __________ |           |
+|                   `.  ||    ` -.|   |  |   _   |    | ________ |`'--.._     |
+|                      `.           ` - .|  | |  |    || ()._o  ||   __ |     |
+|`.          `            `.   `           ` -' .|____|`'---.|>_||  |. ||     |
+|  `.                        `.                         `' -- .._|__|__||     |
+|    `.                ,----.---------- .                            .-_.     |
+|   _  `.             |.`.,' `.           `.                         || |     |
+|        `.         _|`. / `.  `.            `.                       |_o     |
+|          `.        |  `.   `.  `.-----_-----.\     `                        |
+|            `.      `.|.`|  | `. `./\  c__)___/\             .               |
+|              `.       `. `.|    `.\____\___)___\                            |
+|                `.          `.  _ `.\`____________\                          |
+|                  `.          |    |_|   ____   |_|                          |
+|          _         `.        `.|\ |#|__[....]__|#|`.                        |
+|                      `.         `================'  `.                      |
+
+       
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_noN_1_1.fq has been processed.
+Processing of batch 1 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_noN_2_1.fq has been processed.
+Processing of batch 2 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_noN_3_1.fq has been processed.
+Processing of batch 3 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_wN_1_1.fq has been processed.
+Processing of batch 4 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_wN_2_1.fq has been processed.
+Processing of batch 5 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_Pro_wN_3_1.fq has been processed.
+Processing of batch 6 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_1_1.fq has been processed.
+Processing of batch 7 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_2_1.fq has been processed.
+Processing of batch 8 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_3_1.fq has been processed.
+Processing of batch 9 of 36 complete...
+[bam_sort_core] merging from 30 files and 30 in-memory blocks...
+[bam_sort_core] merging from 30 files and 30 in-memory blocks...
+trimmed_WT_Pi_1_1.fq has been processed.
+Processing of batch 10 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_Pi_2_1.fq has been processed.
+Processing of batch 11 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_Pi_3_1.fq has been processed.
+Processing of batch 12 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_SD_1_1.fq has been processed.
+Processing of batch 13 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_SD_2_1.fq has been processed.
+Processing of batch 14 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_SD_3_1.fq has been processed.
+Processing of batch 15 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noPi_1_1.fq has been processed.
+Processing of batch 16 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noPi_2_1.fq has been processed.
+Processing of batch 17 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noPi_3_1.fq has been processed.
+Processing of batch 18 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noURA_1_1.fq has been processed.
+Processing of batch 19 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noURA_2_1.fq has been processed.
+Processing of batch 20 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_WT_noURA_3_1.fq has been processed.
+Processing of batch 21 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_1_1.fq has been processed.
+Processing of batch 22 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_2_1.fq has been processed.
+Processing of batch 23 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_3_1.fq has been processed.
+Processing of batch 24 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_aF_1_1.fq has been processed.
+Processing of batch 25 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_aF_2_1.fq has been processed.
+Processing of batch 26 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_bar1_aF_3_1.fq has been processed.
+Processing of batch 27 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_pho85_1_1.fq has been processed.
+Processing of batch 28 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_pho85_2_1.fq has been processed.
+Processing of batch 29 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_pho85_3_1.fq has been processed.
+Processing of batch 30 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpo41_1_1.fq has been processed.
+Processing of batch 31 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpo41_2_1.fq has been processed.
+Processing of batch 32 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpo41_3_1.fq has been processed.
+Processing of batch 33 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpopho_1_1.fq has been processed.
+Processing of batch 34 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpopho_2_1.fq has been processed.
+Processing of batch 35 of 36 complete...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+[bam_sort_core] merging from 0 files and 30 in-memory blocks...
+trimmed_rpopho_3_1.fq has been processed.
+Processing of batch 36 of 36 complete...
+Process complete.
+************************
+    
+Generating count tables...
+
+    1...2...3...4...5...6...7...8...9...
+ _______________________________________________________________________________
+|{ _ ` ~~'"  /  },\    `,   ,`      _    ,~'                                ,~  |
+| '  \       {  |`,     `,'        / `~,/                               ,~`'    |
+|     \       ``'   \             (,\,'                       /`'~`,,~`'        |
+|      ,'          /            o\_,~'  _                    '~,   {}           |
+|     (       __  /             ,~'/~|\/_\  {}                ,'/               |
+|      `\  (   `'              |,'_  '<_                  ,,''/                 |
+|         `, '_,-              /"'` `'~-/,                )                     |
+|          `_`                {            \  `~,~  ,`, ,~`                     |
+|            ``~{^'~,_         \            \,_/  \/  '\)                       |
+|               /     `~~,,     ``~~~,        /       ; \/\                     |
+|               \          `,         \      /           `' <_>                 |
+|                `,       _|          ,     / _          _,~,|\                 |
+|                  {    ,/            \    / //         /      \                |
+|                  {  ,/               \  /  `          \_,-^,_/                |
+|                  { /                 `~'                    v     v           |
+|                  {,                                              /            |
+|                  `,_                                                          |
+|_______________________________________________________________________________|
+
+       
+Warning: Mate records missing for 952 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1276:25708:36839' aligned to XII:[22052,22063)/+>.
+Warning: Mate records missing for 584 records; first such record: <SAM_Alignment object: Paired-end read 'A00742:395:HK73VDSX3:1:1235:18032:20760', not aligned>.
+Warning: Mate records missing for 1509 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1622:15646:22858' aligned to XII:[6894,7023)/+>.
+Warning: Mate records missing for 914 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:2363:10827:20431' aligned to XII:[35689,35703)/+>.
+Warning: Mate records missing for 745 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1362:27453:5822', not aligned>.
+Warning: Mate records missing for 907 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1342:10393:24721', not aligned>.
+Warning: Mate records missing for 1072 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1510:22923:18897' aligned to XII:[39769,39918)/+>.
+Warning: Mate records missing for 1253 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1160:24514:18991', not aligned>.
+Warning: Mate records missing for 717 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1520:26946:14215' aligned to XII:[74587,74608)/+>.
+Warning: Mate records missing for 864 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2654:31412:21668' aligned to XII:[15487,15507)/+>.
+Warning: Mate records missing for 640 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1317:22996:20462' aligned to XII:[47924,47935)/+>.
+Warning: Mate records missing for 799 records; first such record: <SAM_Alignment object: Paired-end read 'A00742:394:HK52NDSX3:4:1142:32380:2675', not aligned>.
+Warning: Mate records missing for 509 records; first such record: <SAM_Alignment object: Paired-end read 'A00742:394:HK52NDSX3:4:1361:10719:36057' aligned to XII:[48415,48541)/+>.
+Warning: Mate records missing for 868 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2262:20916:27132', not aligned>.
+Warning: Mate records missing for 498 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2510:3748:28244' aligned to Mito:[8389,8538)/->.
+Warning: Mate records missing for 864 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1140:6786:31156' aligned to Mito:[57209,57220)/+>.
+Warning: Mate records missing for 444 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2554:30725:1908', not aligned>.
+Warning: Mate records missing for 727 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1369:11993:21981' aligned to XII:[66804,66923)/+>.
+Warning: Mate records missing for 446 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1166:11360:22044', not aligned>.
+Warning: Mate records missing for 337 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1533:7708:27023', not aligned>.
+Warning: Mate records missing for 1363 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2223:5303:24549' aligned to XII:[21408,21419)/+>.
+Warning: Mate records missing for 435 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:2361:30490:10394', not aligned>.
+Warning: Mate records missing for 1118 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:2674:5602:21746', not aligned>.
+Warning: Mate records missing for 951 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1271:16559:20901', not aligned>.
+Warning: Mate records missing for 670 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1519:20012:18709' aligned to XII:[14510,14523)/+>.
+Warning: Mate records missing for 847 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1410:8088:7138', not aligned>.
+Warning: Mate records missing for 1003 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1136:7645:20275' aligned to XII:[96915,97054)/+>.
+Warning: Mate records missing for 423 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:1623:14281:6715' aligned to XII:[6308,6457)/+>.
+Warning: Mate records missing for 782 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1306:4571:11788', not aligned>.
+Warning: Mate records missing for 613 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2353:7030:13448', not aligned>.
+Warning: Mate records missing for 547 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1607:16432:1266' aligned to XII:[8938,8949)/+>.
+Warning: Mate records missing for 766 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2215:22471:2174' aligned to XII:[7449,7598)/+>.
+Warning: Mate records missing for 1648 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:1:2115:17309:28244' aligned to XII:[19914,19931)/+>.
+Warning: Mate records missing for 912 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2337:11261:34303' aligned to XII:[27468,27481)/+>.
+Warning: Mate records missing for 507 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:1242:13801:12524', not aligned>.
+Warning: Mate records missing for 1014 records; first such record: <SAM_Alignment object: Paired-end read 'A00261:528:HK7FHDSX3:2:2232:13205:2597', not aligned>.
+Pro_noN_1_1_Aligned.sort.bam has been processed.
+Pro_noN_2_1_Aligned.sort.bam has been processed.
+Pro_noN_3_1_Aligned.sort.bam has been processed.
+Pro_wN_1_1_Aligned.sort.bam has been processed.
+Pro_wN_2_1_Aligned.sort.bam has been processed.
+Pro_wN_3_1_Aligned.sort.bam has been processed.
+WT_1_1_Aligned.sort.bam has been processed.
+WT_2_1_Aligned.sort.bam has been processed.
+WT_3_1_Aligned.sort.bam has been processed.
+WT_Pi_1_1_Aligned.sort.bam has been processed.
+WT_Pi_2_1_Aligned.sort.bam has been processed.
+WT_Pi_3_1_Aligned.sort.bam has been processed.
+WT_SD_1_1_Aligned.sort.bam has been processed.
+WT_SD_2_1_Aligned.sort.bam has been processed.
+WT_SD_3_1_Aligned.sort.bam has been processed.
+WT_noPi_1_1_Aligned.sort.bam has been processed.
+WT_noPi_2_1_Aligned.sort.bam has been processed.
+WT_noPi_3_1_Aligned.sort.bam has been processed.
+WT_noURA_1_1_Aligned.sort.bam has been processed.
+WT_noURA_2_1_Aligned.sort.bam has been processed.
+WT_noURA_3_1_Aligned.sort.bam has been processed.
+ba_1_1_Aligned.sort.bam has been processed.
+ba_2_1_Aligned.sort.bam has been processed.
+ba_3_1_Aligned.sort.bam has been processed.
+ba_aF_1_1_Aligned.sort.bam has been processed.
+ba_aF_2_1_Aligned.sort.bam has been processed.
+ba_aF_3_1_Aligned.sort.bam has been processed.
+pho85_1_1_Aligned.sort.bam has been processed.
+pho85_2_1_Aligned.sort.bam has been processed.
+pho85_3_1_Aligned.sort.bam has been processed.
+rpo41_1_1_Aligned.sort.bam has been processed.
+rpo41_2_1_Aligned.sort.bam has been processed.
+rpo41_3_1_Aligned.sort.bam has been processed.
+rpopho_1_1_Aligned.sort.bam has been processed.
+rpopho_2_1_Aligned.sort.bam has been processed.
+rpopho_3_1_Aligned.sort.bam has been processed.
+Processing of batch 1 of 1 complete...
+Process complete.
+************************
+    
+Normalizing counts based on parameters provided...
+
+                           ___,
+                    o___.-' /
+                    |      _\_
+                    |___.-'   `
+                    |
+                    |
+            _   _   j   _   _
+           [_]_[_]_[_]_[_]_[_]
+           [__j__j__j__j__j__]
+             [_j__j__j__j__]
+             [__j__j__j__j_]
+             [_j__j/V\_j__j]
+             [__j_// \__j_]
+             [_j__|   |_j__]
+             [__j_|___|__j_]
+             [_j__j__j__j__]
+             [__j__j__j__j_]
+  _   _   _  [_j__j__j__j__]  _   _   _   _
+_[_]_[_]_[_]_[__j__j__j__j_]_[_]_[_]_[_]_[_]_
+  _j__j__j__j[_j__j__j__j__]j__j__j__j__j_
+     j  j  j [  j  j  j  j ] j  j  j  j
+       
+Process complete.
+************************
+    
+Performing quality control on the processed sequencing data...
+
+      _               _               _
+     | |             | |             | |
+  ___| |__   ___  ___| | _____  _   _| |_
+ / __| '_ \ / _ \/ __| |/ / _ \| | | | __|
+| (__| | | |  __/ (__|   < (_) | |_| | |_
+ \___|_| |_|\___|\___|_|\_\___/ \__,_|\__|
+
+
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_noN_1_1.fq
+trimmed_Pro_noN_1_1.fq has been processed.
+Processing of batch 1 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_noN_2_1.fq
+trimmed_Pro_noN_2_1.fq has been processed.
+Processing of batch 2 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_noN_3_1.fq
+trimmed_Pro_noN_3_1.fq has been processed.
+Processing of batch 3 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_wN_1_1.fq
+trimmed_Pro_wN_1_1.fq has been processed.
+Processing of batch 4 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_wN_2_1.fq
+trimmed_Pro_wN_2_1.fq has been processed.
+Processing of batch 5 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_Pro_wN_3_1.fq
+trimmed_Pro_wN_3_1.fq has been processed.
+Processing of batch 6 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_1_1.fq
+trimmed_WT_1_1.fq has been processed.
+Processing of batch 7 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_2_1.fq
+trimmed_WT_2_1.fq has been processed.
+Processing of batch 8 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_3_1.fq
+trimmed_WT_3_1.fq has been processed.
+Processing of batch 9 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_Pi_1_1.fq
+trimmed_WT_Pi_1_1.fq has been processed.
+Processing of batch 10 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_Pi_2_1.fq
+trimmed_WT_Pi_2_1.fq has been processed.
+Processing of batch 11 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_Pi_3_1.fq
+trimmed_WT_Pi_3_1.fq has been processed.
+Processing of batch 12 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_SD_1_1.fq
+trimmed_WT_SD_1_1.fq has been processed.
+Processing of batch 13 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_SD_2_1.fq
+trimmed_WT_SD_2_1.fq has been processed.
+Processing of batch 14 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_SD_3_1.fq
+trimmed_WT_SD_3_1.fq has been processed.
+Processing of batch 15 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noPi_1_1.fq
+trimmed_WT_noPi_1_1.fq has been processed.
+Processing of batch 16 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noPi_2_1.fq
+trimmed_WT_noPi_2_1.fq has been processed.
+Processing of batch 17 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noPi_3_1.fq
+trimmed_WT_noPi_3_1.fq has been processed.
+Processing of batch 18 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noURA_1_1.fq
+trimmed_WT_noURA_1_1.fq has been processed.
+Processing of batch 19 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noURA_2_1.fq
+trimmed_WT_noURA_2_1.fq has been processed.
+Processing of batch 20 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_WT_noURA_3_1.fq
+trimmed_WT_noURA_3_1.fq has been processed.
+Processing of batch 21 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_1_1.fq
+trimmed_bar1_1_1.fq has been processed.
+Processing of batch 22 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_2_1.fq
+trimmed_bar1_2_1.fq has been processed.
+Processing of batch 23 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_3_1.fq
+trimmed_bar1_3_1.fq has been processed.
+Processing of batch 24 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_aF_1_1.fq
+trimmed_bar1_aF_1_1.fq has been processed.
+Processing of batch 25 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_aF_2_1.fq
+trimmed_bar1_aF_2_1.fq has been processed.
+Processing of batch 26 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_bar1_aF_3_1.fq
+trimmed_bar1_aF_3_1.fq has been processed.
+Processing of batch 27 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_pho85_1_1.fq
+trimmed_pho85_1_1.fq has been processed.
+Processing of batch 28 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_pho85_2_1.fq
+trimmed_pho85_2_1.fq has been processed.
+Processing of batch 29 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_pho85_3_1.fq
+trimmed_pho85_3_1.fq has been processed.
+Processing of batch 30 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpo41_1_1.fq
+trimmed_rpo41_1_1.fq has been processed.
+Processing of batch 31 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpo41_2_1.fq
+trimmed_rpo41_2_1.fq has been processed.
+Processing of batch 32 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpo41_3_1.fq
+trimmed_rpo41_3_1.fq has been processed.
+Processing of batch 33 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpopho_1_1.fq
+trimmed_rpopho_1_1.fq has been processed.
+Processing of batch 34 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpopho_2_1.fq
+trimmed_rpopho_2_1.fq has been processed.
+Processing of batch 35 of 36 complete...
+Evaluating the read distribution profile for /scratch/general/lustre/u0690617/4240563/output_files/trimmed_fastq/trimmed_rpopho_3_1.fq
+trimmed_rpopho_3_1.fq has been processed.
+Processing of batch 36 of 36 complete...
+
+Running complexity analysis of sequence libraries...
+Pro_noN_1_1_dedupMarked.bam has been processed.
+Processing of batch 1 of 36 complete...
+Pro_noN_2_1_dedupMarked.bam has been processed.
+Processing of batch 2 of 36 complete...
+Pro_noN_3_1_dedupMarked.bam has been processed.
+Processing of batch 3 of 36 complete...
+Pro_wN_1_1_dedupMarked.bam has been processed.
+Processing of batch 4 of 36 complete...
+Pro_wN_2_1_dedupMarked.bam has been processed.
+Processing of batch 5 of 36 complete...
+Pro_wN_3_1_dedupMarked.bam has been processed.
+Processing of batch 6 of 36 complete...
+WT_1_1_dedupMarked.bam has been processed.
+Processing of batch 7 of 36 complete...
+WT_2_1_dedupMarked.bam has been processed.
+Processing of batch 8 of 36 complete...
+WT_3_1_dedupMarked.bam has been processed.
+Processing of batch 9 of 36 complete...
+WT_Pi_1_1_dedupMarked.bam has been processed.
+Processing of batch 10 of 36 complete...
+WT_Pi_2_1_dedupMarked.bam has been processed.
+Processing of batch 11 of 36 complete...
+WT_Pi_3_1_dedupMarked.bam has been processed.
+Processing of batch 12 of 36 complete...
+WT_SD_1_1_dedupMarked.bam has been processed.
+Processing of batch 13 of 36 complete...
+WT_SD_2_1_dedupMarked.bam has been processed.
+Processing of batch 14 of 36 complete...
+WT_SD_3_1_dedupMarked.bam has been processed.
+Processing of batch 15 of 36 complete...
+WT_noPi_1_1_dedupMarked.bam has been processed.
+Processing of batch 16 of 36 complete...
+WT_noPi_2_1_dedupMarked.bam has been processed.
+Processing of batch 17 of 36 complete...
+WT_noPi_3_1_dedupMarked.bam has been processed.
+Processing of batch 18 of 36 complete...
+WT_noURA_1_1_dedupMarked.bam has been processed.
+Processing of batch 19 of 36 complete...
+WT_noURA_2_1_dedupMarked.bam has been processed.
+Processing of batch 20 of 36 complete...
+WT_noURA_3_1_dedupMarked.bam has been processed.
+Processing of batch 21 of 36 complete...
+ba_1_1_dedupMarked.bam has been processed.
+Processing of batch 22 of 36 complete...
+ba_2_1_dedupMarked.bam has been processed.
+Processing of batch 23 of 36 complete...
+ba_3_1_dedupMarked.bam has been processed.
+Processing of batch 24 of 36 complete...
+ba_aF_1_1_dedupMarked.bam has been processed.
+Processing of batch 25 of 36 complete...
+ba_aF_2_1_dedupMarked.bam has been processed.
+Processing of batch 26 of 36 complete...
+ba_aF_3_1_dedupMarked.bam has been processed.
+Processing of batch 27 of 36 complete...
+pho85_1_1_dedupMarked.bam has been processed.
+Processing of batch 28 of 36 complete...
+pho85_2_1_dedupMarked.bam has been processed.
+Processing of batch 29 of 36 complete...
+pho85_3_1_dedupMarked.bam has been processed.
+Processing of batch 30 of 36 complete...
+rpo41_1_1_dedupMarked.bam has been processed.
+Processing of batch 31 of 36 complete...
+rpo41_2_1_dedupMarked.bam has been processed.
+Processing of batch 32 of 36 complete...
+rpo41_3_1_dedupMarked.bam has been processed.
+Processing of batch 33 of 36 complete...
+rpopho_1_1_dedupMarked.bam has been processed.
+Processing of batch 34 of 36 complete...
+rpopho_2_1_dedupMarked.bam has been processed.
+Processing of batch 35 of 36 complete...
+rpopho_3_1_dedupMarked.bam has been processed.
+Processing of batch 36 of 36 complete...
+Generating index for GAPDH...
+Could not find GAPDH in reference. Please try running the geneCoverage module with another known housekeeping gene for your organism.
+Generating index for genes...
+
+Generating metagene profiles...
+
+Getting positions of reads...
+Resetting parallelization specs based on max file size to be processed:
+Max number of workers: 11
+Number of threads per worker (where available): 5
+Evaluating the metagene profile for "WT_Pi_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_noN_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_wN_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_wN_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_noN_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_noN_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "Pro_wN_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_Pi_1_1_Aligned.toTranscriptome.out.bam"
+Pro_noN_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_noN_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_noN_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_Pi_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_Pi_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 1 of 4 complete...
+Evaluating the metagene profile for "WT_Pi_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noURA_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_SD_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_SD_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noURA_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noPi_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "ba_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_SD_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noURA_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noPi_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "WT_noPi_3_1_Aligned.toTranscriptome.out.bam"
+WT_Pi_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_3_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 2 of 4 complete...
+Evaluating the metagene profile for "ba_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "rpo41_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "rpo41_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "ba_aF_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "pho85_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "pho85_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "rpo41_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "ba_aF_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "ba_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "pho85_1_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "ba_aF_2_1_Aligned.toTranscriptome.out.bam"
+ba_2_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_3_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_1_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_2_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_3_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_1_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_2_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_3_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_1_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_2_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 3 of 4 complete...
+Evaluating the metagene profile for "rpopho_2_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "rpopho_3_1_Aligned.toTranscriptome.out.bam"
+Evaluating the metagene profile for "rpopho_1_1_Aligned.toTranscriptome.out.bam"
+rpopho_1_1_Aligned.toTranscriptome.out.bam has been processed.
+rpopho_2_1_Aligned.toTranscriptome.out.bam has been processed.
+rpopho_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 4 of 4 complete...
+
+Converting positions to metapositions...
+Resetting parallelization specs based on max file size to be processed:
+Max number of workers: 11
+Number of threads per worker (where available): 5
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_wN_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/Pro_noN_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_1_1_Aligned_metrics.txt
+Pro_noN_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_noN_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_noN_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Pro_wN_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_Pi_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_Pi_2_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 1 of 4 complete...
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_Pi_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noURA_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_noPi_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/WT_SD_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_1_1_Aligned_metrics.txt
+WT_Pi_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_SD_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noPi_3_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_1_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_2_1_Aligned.toTranscriptome.out.bam has been processed.
+WT_noURA_3_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_1_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 2 of 4 complete...
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpo41_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/pho85_1_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/ba_aF_1_1_Aligned_metrics.txt
+ba_2_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_3_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_1_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_2_1_Aligned.toTranscriptome.out.bam has been processed.
+ba_aF_3_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_1_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_2_1_Aligned.toTranscriptome.out.bam has been processed.
+pho85_3_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_1_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_2_1_Aligned.toTranscriptome.out.bam has been processed.
+rpo41_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 3 of 4 complete...
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_2_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_2_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_3_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_3_1_Aligned_metrics.txt
+Reading in /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_1_1_Aligned.metaposit
+Profile exported to /scratch/general/lustre/u0690617/4240563/output_files/metagene/metrics/rpopho_1_1_Aligned_metrics.txt
+rpopho_1_1_Aligned.toTranscriptome.out.bam has been processed.
+rpopho_2_1_Aligned.toTranscriptome.out.bam has been processed.
+rpopho_3_1_Aligned.toTranscriptome.out.bam has been processed.
+Processing of batch 4 of 4 complete...
+
+Plotting...
+Process complete.
+************************
+    
+Quality control complete
+
+             __
+            / /
+           / /
+          / /
+ __      / /
+ \ \    / /
+  \ \  / /
+   \ \/ /
+    \__/
+
+XPRESSpipe processing complete
+
+                                    ..
+                                     .(  )`-._
+                                   .'  ||     `._
+                                 .'    ||        `.
+                              .'       ||          `._
+                            .'        _||_            `-.
+                         .'          |====|              `..
+                       .'            __/               (  )
+                     ( )               ||          _      ||
+                     /|\               ||       .-`     ||
+                   .' | '              ||   _.-'    |     ||
+                  /   |\             || .'   `.__.'     ||   _.-..
+                .'   /| `.            _.-'   _.-'       _.-.`-'`._`.`
+                 .' |  |        .-.`    `./      _.-`.    `._.-'
+                 |.   |  `.   _.-'   `.   .'     .'  `._.`---`
+                .'    |   |  :   `._..-'.'        `._..'  ||
+               /      |    `-._.'    ||                 ||
+              |     .'|`.  |           ||_.--.-._         ||
+              '    /  |        __.--'\    `. :        ||
+                .'  |  |   ..-'     `._-._.'        ||
+`.._            |/    |    `.      `._.-              ||
+    `-.._       /     |       `-.'_.--'                 ||
+         `-.._.'      |      |        | |         _ _ _  _'_ _ _ _ _
+              `-.._   |             | |        |_|_|_'|_|_|_|_|_|_|
+                  [`--^-..._.'        | |       /....../|  __   __  |
+                  `---.._|`--.._    | |      /....../ | |__| |__| |
+                   __  _ `-.._| `-._|_|_ _ _/_ _ _ /  | |__| |__| |
+                       _o_   _`-._|_|_|_|_|_|_|_|_/   '-----------/
+                     _`.|.'  _  - .--.--.--.--.--.`--------------'
+      .```-._ ``-.._  __   _    _ '--'--'--'--'--'  - _ - _  __/
+ .`-.```-._ ``-..__``.- `.      _     -  _  _  _ -    _-   _  __/(.``-._
+ _.-` ``--..  ..    _.-` ``--..  .. .._ _. __ __ _ __ ..--.._ / .( _..``
+`.-._  `._  `- `-._  .`-.```-._ ``-..__``.-  -._--.__---._--..-._`...```
+   _.-` ``--..  ..  `.-._  `._  `- `-._ .-_. ._.- -._ --.._`` _.-`---`-.
+
+
+
+        

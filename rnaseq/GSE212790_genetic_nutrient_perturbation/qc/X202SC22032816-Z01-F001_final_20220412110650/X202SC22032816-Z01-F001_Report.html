@@ -1,0 +1,1672 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<html>
+<head>
+<TITLE> QC analysis report</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="src/css/jquery-ui.css" />
+<link rel="stylesheet" href="src/css/bootstrap-4.3.1.min.css" />
+<link rel="stylesheet" href="src/css/jquery.tocify.css" />
+<link rel="stylesheet" href="src/css/style.css"/>
+<link rel="stylesheet" href="src/css/base.css"/>
+<link rel="stylesheet" href="src/css/gallery.css"/>
+<script src="src/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="src/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="src/js/jquery.tocify.min.js" type="text/javascript"></script>
+<script src="src/js/bootstrap-4.3.1.min.js" type="text/javascript"></script>
+<script src="src/js/scrollTop.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function () {
+		var options = {
+			selectors: "h2,h3,h4,h5",
+			theme: "bootstrap",
+			scrollTo: "60"
+		};
+		var toc = $("#toc").tocify(options).data("toc-tocify");
+	});
+</script>
+<script type="text/javascript">
+function trans(img_div_id) {
+img_div = $("#" + img_div_id)
+img = $("#" + img_div_id + " img").first();
+if (img_div.hasClass("fullscreen-div")) {
+img_div.removeClass("fullscreen-div");
+img.removeClass("fullscreen-img");
+}
+else {
+img_div.addClass("fullscreen-div");
+img.addClass("fullscreen-img");
+}
+}
+function filter_display() {
+return $(this).css("display") != "none";
+}
+function show_default() {
+var list_group_id = "#" + $(this).attr("id");
+if ($(list_group_id + " a.active").css("display") == "none") {
+var list_tab = $(list_group_id + " a.active");
+var pan_id = list_tab.attr("href");
+$(pan_id).removeClass("active show");
+list_tab.removeClass("active");
+}
+if ($(list_group_id + " a.active").filter(filter_display).length == 0) {
+$(list_group_id + " a").filter(filter_display).first().tab("show");
+}
+}
+$.fn.show_default = show_default
+function next(botton_id) {
+var present_tab = $("#" + botton_id.replace("_button_next", "_list-tab") + " .active").first();
+while (present_tab.next().length == 1) {
+if (present_tab.next().css("display") != "none") {
+present_tab.next().tab("show");
+break;
+}
+else {
+present_tab = present_tab.next();
+}
+}
+}
+function prev(botton_id) {
+var present_tab = $("#" + botton_id.replace("_button_prev", "_list-tab") + " .active").first();
+while (present_tab.prev().length == 1) {
+if (present_tab.prev().css("display") != "none") {
+present_tab.prev().tab("show");
+break;
+}
+else {
+present_tab = present_tab.prev();
+}
+}
+}
+$(document).ready(function () {
+$(".form-control").on("keyup", function () {
+var value = $(this).val().toLowerCase();
+var input_box_id = "#" + $(this).attr("id");
+var list_group_id = input_box_id.replace("_InputList", "_list-tab");
+$(list_group_id + " a").filter(function () {
+$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+});
+$(list_group_id).show_default();
+});
+$(".list-group").each(show_default);
+});
+</script>
+</head>
+<body>
+<div id="toc" class="tocify">
+</div>
+	<div style="position:fixed; top:0; left:0; width:100%; z-index:1000;">
+		<table width="100%" height="50px" border="0" cellpadding="5" cellspacing="0"
+			style="background:#F3F3F3; border-bottom:1px solid #eee;border-top: none;background-image:-moz-linear-gradient(top,#EEEEEE,#FFFFFF); background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#EEEEEE), color-stop(1,#FFFFFF));filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EEEEEE', endColorstr='#FFFFFF', GradientType='0')">
+			<tr height="86%">
+				<td width='1%'></td>
+				<td><img src="src/images/logo1.png"></td>
+				<td>
+					<div style="margin:5px;border-left:1px solid #DCDCDC;height:30px"></div>
+				</td>
+				<td width="20%"></td>
+				<td width="15%"></td>
+				<td width="25%"
+					style="text-align:right;padding:0px;margin:0px;color:black;font-size:14px;font-weight:50;">
+					<br><a href="mailto:op-rna@novogene.com" target="black"
+						style="text-decoration:none;color:black;font-size:14px;font-weight:50;">
+						<a></td>
+				<td width="1%"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<!--------------------------标题---------------------------------->
+<div id="main">
+<br><h1>QC Analysis Report</h1></br>
+<table class="gy">
+<tr>
+
+<th>Contract Information</th>
+<th>Contract Content</th>
+
+</tr>
+
+<tr>
+
+<td>Contract ID</td>
+
+<td>H202SC22032816</td>
+
+</tr>
+
+<tr>
+
+<td>Batch ID</td>
+
+<td>X202SC22032816-Z01-F001</td>
+
+</tr>
+
+<tr>
+
+<td>Report Time</td>
+
+<td>2022-04-12</td>
+
+</tr>
+
+</table>
+<br /><br />
+<!------RNA------>
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="Library Preparation and Sequencing">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h2>A. Library Preparation and Sequencing</h2>
+<p class="paragraph">From the RNA samples to the final data, each step, including sample test, library preparation, and sequencing, influences the quality of the data, and data quality directly impacts the analysis results. To guarantee the reliability of the data, quality control (QC) is performed at each step of the procedure. The workflow is as follows:</p>
+<p class="center">
+<img src="src/images/pipeline.png" width="600" height="450" />
+</p>
+<p class="paragraph"></p>
+
+<h3>1 Sample Quality Control</h3>
+<p class="paragraph">Please refer to Novogene’s QC report for methods of sample quality control.</p>
+<p class="paragraph"></p>
+
+<h3>2 Library Construction, Quality Control and Sequencing</h3>
+<p class="paragraph">Messenger RNA was purified from total RNA using poly-T oligo-attached magnetic beads. After fragmentation, the first strand cDNA was synthesized using random hexamer primers followed by the second strand cDNA synthesis. The library was ready after end repair, A-tailing, adapter ligation, size selection, amplification, and purification. Following is the workflow of library construction:</p>
+<p class="center">
+<img src="src/images/library.png" width="150" height="450" />
+</p>
+<p class="paragraph">The library was checked with Qubit and real-time PCR for quantification and bioanalyzer for size distribution detection. Quantified libraries will be pooled and sequenced on Illumina platforms, according to effective library concentration and data amount.</p>
+
+<!----------------------------------------------------------------------------------------->
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="项目结果说明">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h2>B. Results and Instructions</h2>
+<h3>1 Data Quality Control</h3>
+<h4>1.1 Distribution of Sequencing Quality</h4>
+<p class="paragraph">The “e” represents the sequence error rate and Q<sub>phred</sub> represents the base quality value,Q<sub>phred</sub>=-10log<sub>10</sub>(e). 
+The relationship between sequencing error rate (e) and sequencing base quality value (Q<sub>phred</sub>) is shown in the table below:</p>
+<table class="gy">
+<tr><th>Phred score</th><th>Error base</th><th>Right base</th><th>Q-score</th></tr>
+<tr><td>10</td><td>1/10</td><td>90%</td><td>Q10</td></tr>
+<tr><td>20</td><td>1/100</td><td>99%</td><td>Q20</td></tr>
+<tr><td>30</td><td>1/1000</td><td>99.9%</td><td>Q30</td></tr>
+<tr><td>40</td><td>1/10000</td><td>99.99%</td><td>Q40</td></tr>
+</table>
+</p>
+</p>
+<p class="paragraph">The distribution of quality score is shown in <strong>Fig.1</strong>: </p>
+<p class="center">
+<div class="row gallery-row">
+<div class="col-1">
+<div id="gallery_figure_qscore_button_prev" class="button_prev" onclick="prev(this.id)"><svg viewbox="0 0 16000 16000" class="svg_prev"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="8789.5,4902.8 8789.5,5846.4 6801.7,8000 8789.5,10253.6 8789.5,11097.2 5930.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-6">
+<div class="tab-content" id="gallery_figure_qscore_nav-tabContent">
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpo41_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpo41_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpo41_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpo41_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpo41_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpo41_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpo41_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpo41_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpo41_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_pho85_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_pho85_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/pho85_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_pho85_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_pho85_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/pho85_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_pho85_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_pho85_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/pho85_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpopho_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpopho_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpopho_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpopho_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpopho_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpopho_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_rpopho_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_rpopho_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/rpopho_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_Pi_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_Pi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_Pi_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_Pi_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_Pi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_Pi_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_Pi_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_Pi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_Pi_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noPi_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noPi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noPi_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noPi_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noPi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noPi_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noPi_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noPi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noPi_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_SD_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_SD_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_SD_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_SD_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_SD_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_SD_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_SD_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_SD_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_SD_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noURA_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noURA_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noURA_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noURA_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noURA_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noURA_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_WT_noURA_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_WT_noURA_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/WT_noURA_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_wN_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_wN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_wN_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_wN_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_wN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_wN_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_wN_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_wN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_wN_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_noN_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_noN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_noN_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_noN_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_noN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_noN_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_Pro_noN_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_Pro_noN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/Pro_noN_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_3.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_aF_1" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_aF_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_aF_1.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_aF_2" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_aF_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_aF_2.QM.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_qscore_pane_bar1_aF_3" role="tabpanel" aria-labelledby="gallery_figure_qscore_list_bar1_aF_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/QM/bar1_aF_3.QM.png" /></div>
+
+
+
+</div>
+</div>
+<div class="col-1">
+<div id="gallery_figure_qscore_button_next" class="button_next" onclick="next(this.id)"><svg viewbox="0 0 16000 16000" class="svg_next"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="7210.5,4902.8 7210.5,5846.4 9198.3,8000 7210.5,10253.6 7210.5,11097.2 10069.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-4">
+<input class="form-control" id="gallery_figure_qscore_InputList" type="text" placeholder="Search..">
+<div class="list-group" id="gallery_figure_qscore_list-tab" role="tablist">
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_1" data-toggle="list" href="#gallery_figure_qscore_pane_WT_1" role="tab" aria-controls="WT_1">WT_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_2" data-toggle="list" href="#gallery_figure_qscore_pane_WT_2" role="tab" aria-controls="WT_2">WT_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_3" data-toggle="list" href="#gallery_figure_qscore_pane_WT_3" role="tab" aria-controls="WT_3">WT_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpo41_1" data-toggle="list" href="#gallery_figure_qscore_pane_rpo41_1" role="tab" aria-controls="rpo41_1">rpo41_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpo41_2" data-toggle="list" href="#gallery_figure_qscore_pane_rpo41_2" role="tab" aria-controls="rpo41_2">rpo41_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpo41_3" data-toggle="list" href="#gallery_figure_qscore_pane_rpo41_3" role="tab" aria-controls="rpo41_3">rpo41_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_pho85_1" data-toggle="list" href="#gallery_figure_qscore_pane_pho85_1" role="tab" aria-controls="pho85_1">pho85_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_pho85_2" data-toggle="list" href="#gallery_figure_qscore_pane_pho85_2" role="tab" aria-controls="pho85_2">pho85_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_pho85_3" data-toggle="list" href="#gallery_figure_qscore_pane_pho85_3" role="tab" aria-controls="pho85_3">pho85_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpopho_1" data-toggle="list" href="#gallery_figure_qscore_pane_rpopho_1" role="tab" aria-controls="rpopho_1">rpopho_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpopho_2" data-toggle="list" href="#gallery_figure_qscore_pane_rpopho_2" role="tab" aria-controls="rpopho_2">rpopho_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_rpopho_3" data-toggle="list" href="#gallery_figure_qscore_pane_rpopho_3" role="tab" aria-controls="rpopho_3">rpopho_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_Pi_1" data-toggle="list" href="#gallery_figure_qscore_pane_WT_Pi_1" role="tab" aria-controls="WT_Pi_1">WT_Pi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_Pi_2" data-toggle="list" href="#gallery_figure_qscore_pane_WT_Pi_2" role="tab" aria-controls="WT_Pi_2">WT_Pi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_Pi_3" data-toggle="list" href="#gallery_figure_qscore_pane_WT_Pi_3" role="tab" aria-controls="WT_Pi_3">WT_Pi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noPi_1" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noPi_1" role="tab" aria-controls="WT_noPi_1">WT_noPi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noPi_2" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noPi_2" role="tab" aria-controls="WT_noPi_2">WT_noPi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noPi_3" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noPi_3" role="tab" aria-controls="WT_noPi_3">WT_noPi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_SD_1" data-toggle="list" href="#gallery_figure_qscore_pane_WT_SD_1" role="tab" aria-controls="WT_SD_1">WT_SD_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_SD_2" data-toggle="list" href="#gallery_figure_qscore_pane_WT_SD_2" role="tab" aria-controls="WT_SD_2">WT_SD_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_SD_3" data-toggle="list" href="#gallery_figure_qscore_pane_WT_SD_3" role="tab" aria-controls="WT_SD_3">WT_SD_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noURA_1" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noURA_1" role="tab" aria-controls="WT_noURA_1">WT_noURA_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noURA_2" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noURA_2" role="tab" aria-controls="WT_noURA_2">WT_noURA_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_WT_noURA_3" data-toggle="list" href="#gallery_figure_qscore_pane_WT_noURA_3" role="tab" aria-controls="WT_noURA_3">WT_noURA_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_wN_1" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_wN_1" role="tab" aria-controls="Pro_wN_1">Pro_wN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_wN_2" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_wN_2" role="tab" aria-controls="Pro_wN_2">Pro_wN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_wN_3" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_wN_3" role="tab" aria-controls="Pro_wN_3">Pro_wN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_noN_1" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_noN_1" role="tab" aria-controls="Pro_noN_1">Pro_noN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_noN_2" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_noN_2" role="tab" aria-controls="Pro_noN_2">Pro_noN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_Pro_noN_3" data-toggle="list" href="#gallery_figure_qscore_pane_Pro_noN_3" role="tab" aria-controls="Pro_noN_3">Pro_noN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_1" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_1" role="tab" aria-controls="bar1_1">bar1_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_2" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_2" role="tab" aria-controls="bar1_2">bar1_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_3" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_3" role="tab" aria-controls="bar1_3">bar1_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_aF_1" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_aF_1" role="tab" aria-controls="bar1_aF_1">bar1_aF_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_aF_2" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_aF_2" role="tab" aria-controls="bar1_aF_2">bar1_aF_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_qscore_list_bar1_aF_3" data-toggle="list" href="#gallery_figure_qscore_pane_bar1_aF_3" role="tab" aria-controls="bar1_aF_3">bar1_aF_3</a>
+
+
+
+</div>
+</div>
+</div>
+
+<p class="name_fig"><strong>Fig.1 Distribution of Sequencing Quality</strong></p>
+<p class="premark">The base position is on the horizontal axis and the sequencing quality is on the vertical axis. </p>
+<!------------------------------------------------------------------------------------------------------------>
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="Distribution of Sequencing Error Rate">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h4>1.2 Distribution of Sequencing Error Rate</h4>
+<p class="paragraph">For Illumina SBS technology, the distribution of sequencing error rate has two features: </p>
+<p class="paragraph">(1) Error rate grows with sequenced reads extension because of the consumption of sequencing reagent. The phenomenon is common in the Illumina high-throughput sequencing platform (Erlich Y. et al. 2008; Jiang et al. 2011). </p>
+<p class="paragraph">(2) The reason for the high error rate of the first six bases is that the random hex-primers and RNA template bind incompletely in the process of cDNA synthesis (Jiang et al.2011).</p>
+<p class="paragraph">The error rate of this project is shown in <strong>Fig.2</strong>: </p>
+<br />
+
+<p class="center">
+<div class="row gallery-row">
+<div class="col-1">
+<div id="gallery_figure_error_button_prev" class="button_prev" onclick="prev(this.id)"><svg viewbox="0 0 16000 16000" class="svg_prev"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="8789.5,4902.8 8789.5,5846.4 6801.7,8000 8789.5,10253.6 8789.5,11097.2 5930.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-6">
+<div class="tab-content" id="gallery_figure_error_nav-tabContent">
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpo41_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpo41_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpo41_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpo41_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpo41_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpo41_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpo41_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpo41_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpo41_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_pho85_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_pho85_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/pho85_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_pho85_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_pho85_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/pho85_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_pho85_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_pho85_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/pho85_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpopho_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpopho_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpopho_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpopho_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpopho_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpopho_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_rpopho_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_rpopho_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/rpopho_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_Pi_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_Pi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_Pi_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_Pi_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_Pi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_Pi_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_Pi_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_Pi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_Pi_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noPi_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noPi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noPi_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noPi_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noPi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noPi_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noPi_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noPi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noPi_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_SD_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_SD_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_SD_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_SD_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_SD_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_SD_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_SD_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_SD_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_SD_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noURA_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noURA_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noURA_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noURA_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noURA_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noURA_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_WT_noURA_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_WT_noURA_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/WT_noURA_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_wN_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_wN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_wN_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_wN_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_wN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_wN_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_wN_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_wN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_wN_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_noN_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_noN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_noN_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_noN_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_noN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_noN_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_Pro_noN_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_Pro_noN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/Pro_noN_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_3.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_aF_1" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_aF_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_aF_1.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_aF_2" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_aF_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_aF_2.Error.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_error_pane_bar1_aF_3" role="tabpanel" aria-labelledby="gallery_figure_error_list_bar1_aF_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Error/bar1_aF_3.Error.png" /></div>
+
+
+
+</div>
+</div>
+<div class="col-1">
+<div id="gallery_figure_error_button_next" class="button_next" onclick="next(this.id)"><svg viewbox="0 0 16000 16000" class="svg_next"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="7210.5,4902.8 7210.5,5846.4 9198.3,8000 7210.5,10253.6 7210.5,11097.2 10069.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-4">
+<input class="form-control" id="gallery_figure_error_InputList" type="text" placeholder="Search..">
+<div class="list-group" id="gallery_figure_error_list-tab" role="tablist">
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_1" data-toggle="list" href="#gallery_figure_error_pane_WT_1" role="tab" aria-controls="WT_1">WT_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_2" data-toggle="list" href="#gallery_figure_error_pane_WT_2" role="tab" aria-controls="WT_2">WT_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_3" data-toggle="list" href="#gallery_figure_error_pane_WT_3" role="tab" aria-controls="WT_3">WT_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpo41_1" data-toggle="list" href="#gallery_figure_error_pane_rpo41_1" role="tab" aria-controls="rpo41_1">rpo41_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpo41_2" data-toggle="list" href="#gallery_figure_error_pane_rpo41_2" role="tab" aria-controls="rpo41_2">rpo41_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpo41_3" data-toggle="list" href="#gallery_figure_error_pane_rpo41_3" role="tab" aria-controls="rpo41_3">rpo41_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_pho85_1" data-toggle="list" href="#gallery_figure_error_pane_pho85_1" role="tab" aria-controls="pho85_1">pho85_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_pho85_2" data-toggle="list" href="#gallery_figure_error_pane_pho85_2" role="tab" aria-controls="pho85_2">pho85_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_pho85_3" data-toggle="list" href="#gallery_figure_error_pane_pho85_3" role="tab" aria-controls="pho85_3">pho85_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpopho_1" data-toggle="list" href="#gallery_figure_error_pane_rpopho_1" role="tab" aria-controls="rpopho_1">rpopho_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpopho_2" data-toggle="list" href="#gallery_figure_error_pane_rpopho_2" role="tab" aria-controls="rpopho_2">rpopho_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_rpopho_3" data-toggle="list" href="#gallery_figure_error_pane_rpopho_3" role="tab" aria-controls="rpopho_3">rpopho_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_Pi_1" data-toggle="list" href="#gallery_figure_error_pane_WT_Pi_1" role="tab" aria-controls="WT_Pi_1">WT_Pi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_Pi_2" data-toggle="list" href="#gallery_figure_error_pane_WT_Pi_2" role="tab" aria-controls="WT_Pi_2">WT_Pi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_Pi_3" data-toggle="list" href="#gallery_figure_error_pane_WT_Pi_3" role="tab" aria-controls="WT_Pi_3">WT_Pi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noPi_1" data-toggle="list" href="#gallery_figure_error_pane_WT_noPi_1" role="tab" aria-controls="WT_noPi_1">WT_noPi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noPi_2" data-toggle="list" href="#gallery_figure_error_pane_WT_noPi_2" role="tab" aria-controls="WT_noPi_2">WT_noPi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noPi_3" data-toggle="list" href="#gallery_figure_error_pane_WT_noPi_3" role="tab" aria-controls="WT_noPi_3">WT_noPi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_SD_1" data-toggle="list" href="#gallery_figure_error_pane_WT_SD_1" role="tab" aria-controls="WT_SD_1">WT_SD_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_SD_2" data-toggle="list" href="#gallery_figure_error_pane_WT_SD_2" role="tab" aria-controls="WT_SD_2">WT_SD_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_SD_3" data-toggle="list" href="#gallery_figure_error_pane_WT_SD_3" role="tab" aria-controls="WT_SD_3">WT_SD_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noURA_1" data-toggle="list" href="#gallery_figure_error_pane_WT_noURA_1" role="tab" aria-controls="WT_noURA_1">WT_noURA_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noURA_2" data-toggle="list" href="#gallery_figure_error_pane_WT_noURA_2" role="tab" aria-controls="WT_noURA_2">WT_noURA_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_WT_noURA_3" data-toggle="list" href="#gallery_figure_error_pane_WT_noURA_3" role="tab" aria-controls="WT_noURA_3">WT_noURA_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_wN_1" data-toggle="list" href="#gallery_figure_error_pane_Pro_wN_1" role="tab" aria-controls="Pro_wN_1">Pro_wN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_wN_2" data-toggle="list" href="#gallery_figure_error_pane_Pro_wN_2" role="tab" aria-controls="Pro_wN_2">Pro_wN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_wN_3" data-toggle="list" href="#gallery_figure_error_pane_Pro_wN_3" role="tab" aria-controls="Pro_wN_3">Pro_wN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_noN_1" data-toggle="list" href="#gallery_figure_error_pane_Pro_noN_1" role="tab" aria-controls="Pro_noN_1">Pro_noN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_noN_2" data-toggle="list" href="#gallery_figure_error_pane_Pro_noN_2" role="tab" aria-controls="Pro_noN_2">Pro_noN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_Pro_noN_3" data-toggle="list" href="#gallery_figure_error_pane_Pro_noN_3" role="tab" aria-controls="Pro_noN_3">Pro_noN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_1" data-toggle="list" href="#gallery_figure_error_pane_bar1_1" role="tab" aria-controls="bar1_1">bar1_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_2" data-toggle="list" href="#gallery_figure_error_pane_bar1_2" role="tab" aria-controls="bar1_2">bar1_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_3" data-toggle="list" href="#gallery_figure_error_pane_bar1_3" role="tab" aria-controls="bar1_3">bar1_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_aF_1" data-toggle="list" href="#gallery_figure_error_pane_bar1_aF_1" role="tab" aria-controls="bar1_aF_1">bar1_aF_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_aF_2" data-toggle="list" href="#gallery_figure_error_pane_bar1_aF_2" role="tab" aria-controls="bar1_aF_2">bar1_aF_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_error_list_bar1_aF_3" data-toggle="list" href="#gallery_figure_error_pane_bar1_aF_3" role="tab" aria-controls="bar1_aF_3">bar1_aF_3</a>
+
+
+
+</div>
+</div>
+</div>
+
+<p class="name_fig"><strong>Fig.2 Error Rate Distribution</strong></p>
+<p class="premark">The base position is on the horizontal axis and the single base error rate is on the vertical axis</p>
+<!------------------------------------------------------------------------------------------------------------>
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="A/T/G/C碱基含量分布检查">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h4>1.3 Distribution of A/T/G/C Base</h4>
+<p class="paragraph">It is used to identify the separation situation of AT and GC by checking the distribution of GC content. According to the principle of complementary bases, the content of AT and GC should be equal at each sequencing cycle and be constant and stable in the whole sequencing procedure. 
+But in practical measurement, due to the primer amplification bias and some other reasons, the first 6 to 7 nucleotides will fluctuate which is normal and reasonable.
+</p>
+<p class="paragraph">The distribution of GC content is shown in <strong>Fig.3</strong>:</p>
+<p class="center">
+<div class="row gallery-row">
+<div class="col-1">
+<div id="gallery_figure_gc_button_prev" class="button_prev" onclick="prev(this.id)"><svg viewbox="0 0 16000 16000" class="svg_prev"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="8789.5,4902.8 8789.5,5846.4 6801.7,8000 8789.5,10253.6 8789.5,11097.2 5930.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-6">
+<div class="tab-content" id="gallery_figure_gc_nav-tabContent">
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpo41_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpo41_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpo41_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpo41_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpo41_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpo41_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpo41_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpo41_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpo41_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_pho85_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_pho85_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/pho85_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_pho85_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_pho85_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/pho85_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_pho85_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_pho85_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/pho85_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpopho_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpopho_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpopho_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpopho_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpopho_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpopho_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_rpopho_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_rpopho_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/rpopho_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_Pi_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_Pi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_Pi_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_Pi_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_Pi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_Pi_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_Pi_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_Pi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_Pi_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noPi_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noPi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noPi_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noPi_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noPi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noPi_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noPi_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noPi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noPi_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_SD_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_SD_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_SD_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_SD_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_SD_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_SD_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_SD_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_SD_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_SD_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noURA_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noURA_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noURA_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noURA_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noURA_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noURA_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_WT_noURA_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_WT_noURA_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/WT_noURA_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_wN_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_wN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_wN_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_wN_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_wN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_wN_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_wN_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_wN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_wN_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_noN_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_noN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_noN_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_noN_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_noN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_noN_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_Pro_noN_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_Pro_noN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/Pro_noN_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_3.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_aF_1" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_aF_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_aF_1.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_aF_2" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_aF_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_aF_2.GC.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_gc_pane_bar1_aF_3" role="tabpanel" aria-labelledby="gallery_figure_gc_list_bar1_aF_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/GC/bar1_aF_3.GC.png" /></div>
+
+
+
+</div>
+</div>
+<div class="col-1">
+<div id="gallery_figure_gc_button_next" class="button_next" onclick="next(this.id)"><svg viewbox="0 0 16000 16000" class="svg_next"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="7210.5,4902.8 7210.5,5846.4 9198.3,8000 7210.5,10253.6 7210.5,11097.2 10069.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-4">
+<input class="form-control" id="gallery_figure_gc_InputList" type="text" placeholder="Search..">
+<div class="list-group" id="gallery_figure_gc_list-tab" role="tablist">
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_1" data-toggle="list" href="#gallery_figure_gc_pane_WT_1" role="tab" aria-controls="WT_1">WT_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_2" data-toggle="list" href="#gallery_figure_gc_pane_WT_2" role="tab" aria-controls="WT_2">WT_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_3" data-toggle="list" href="#gallery_figure_gc_pane_WT_3" role="tab" aria-controls="WT_3">WT_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpo41_1" data-toggle="list" href="#gallery_figure_gc_pane_rpo41_1" role="tab" aria-controls="rpo41_1">rpo41_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpo41_2" data-toggle="list" href="#gallery_figure_gc_pane_rpo41_2" role="tab" aria-controls="rpo41_2">rpo41_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpo41_3" data-toggle="list" href="#gallery_figure_gc_pane_rpo41_3" role="tab" aria-controls="rpo41_3">rpo41_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_pho85_1" data-toggle="list" href="#gallery_figure_gc_pane_pho85_1" role="tab" aria-controls="pho85_1">pho85_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_pho85_2" data-toggle="list" href="#gallery_figure_gc_pane_pho85_2" role="tab" aria-controls="pho85_2">pho85_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_pho85_3" data-toggle="list" href="#gallery_figure_gc_pane_pho85_3" role="tab" aria-controls="pho85_3">pho85_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpopho_1" data-toggle="list" href="#gallery_figure_gc_pane_rpopho_1" role="tab" aria-controls="rpopho_1">rpopho_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpopho_2" data-toggle="list" href="#gallery_figure_gc_pane_rpopho_2" role="tab" aria-controls="rpopho_2">rpopho_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_rpopho_3" data-toggle="list" href="#gallery_figure_gc_pane_rpopho_3" role="tab" aria-controls="rpopho_3">rpopho_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_Pi_1" data-toggle="list" href="#gallery_figure_gc_pane_WT_Pi_1" role="tab" aria-controls="WT_Pi_1">WT_Pi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_Pi_2" data-toggle="list" href="#gallery_figure_gc_pane_WT_Pi_2" role="tab" aria-controls="WT_Pi_2">WT_Pi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_Pi_3" data-toggle="list" href="#gallery_figure_gc_pane_WT_Pi_3" role="tab" aria-controls="WT_Pi_3">WT_Pi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noPi_1" data-toggle="list" href="#gallery_figure_gc_pane_WT_noPi_1" role="tab" aria-controls="WT_noPi_1">WT_noPi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noPi_2" data-toggle="list" href="#gallery_figure_gc_pane_WT_noPi_2" role="tab" aria-controls="WT_noPi_2">WT_noPi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noPi_3" data-toggle="list" href="#gallery_figure_gc_pane_WT_noPi_3" role="tab" aria-controls="WT_noPi_3">WT_noPi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_SD_1" data-toggle="list" href="#gallery_figure_gc_pane_WT_SD_1" role="tab" aria-controls="WT_SD_1">WT_SD_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_SD_2" data-toggle="list" href="#gallery_figure_gc_pane_WT_SD_2" role="tab" aria-controls="WT_SD_2">WT_SD_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_SD_3" data-toggle="list" href="#gallery_figure_gc_pane_WT_SD_3" role="tab" aria-controls="WT_SD_3">WT_SD_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noURA_1" data-toggle="list" href="#gallery_figure_gc_pane_WT_noURA_1" role="tab" aria-controls="WT_noURA_1">WT_noURA_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noURA_2" data-toggle="list" href="#gallery_figure_gc_pane_WT_noURA_2" role="tab" aria-controls="WT_noURA_2">WT_noURA_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_WT_noURA_3" data-toggle="list" href="#gallery_figure_gc_pane_WT_noURA_3" role="tab" aria-controls="WT_noURA_3">WT_noURA_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_wN_1" data-toggle="list" href="#gallery_figure_gc_pane_Pro_wN_1" role="tab" aria-controls="Pro_wN_1">Pro_wN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_wN_2" data-toggle="list" href="#gallery_figure_gc_pane_Pro_wN_2" role="tab" aria-controls="Pro_wN_2">Pro_wN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_wN_3" data-toggle="list" href="#gallery_figure_gc_pane_Pro_wN_3" role="tab" aria-controls="Pro_wN_3">Pro_wN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_noN_1" data-toggle="list" href="#gallery_figure_gc_pane_Pro_noN_1" role="tab" aria-controls="Pro_noN_1">Pro_noN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_noN_2" data-toggle="list" href="#gallery_figure_gc_pane_Pro_noN_2" role="tab" aria-controls="Pro_noN_2">Pro_noN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_Pro_noN_3" data-toggle="list" href="#gallery_figure_gc_pane_Pro_noN_3" role="tab" aria-controls="Pro_noN_3">Pro_noN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_1" data-toggle="list" href="#gallery_figure_gc_pane_bar1_1" role="tab" aria-controls="bar1_1">bar1_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_2" data-toggle="list" href="#gallery_figure_gc_pane_bar1_2" role="tab" aria-controls="bar1_2">bar1_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_3" data-toggle="list" href="#gallery_figure_gc_pane_bar1_3" role="tab" aria-controls="bar1_3">bar1_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_aF_1" data-toggle="list" href="#gallery_figure_gc_pane_bar1_aF_1" role="tab" aria-controls="bar1_aF_1">bar1_aF_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_aF_2" data-toggle="list" href="#gallery_figure_gc_pane_bar1_aF_2" role="tab" aria-controls="bar1_aF_2">bar1_aF_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_gc_list_bar1_aF_3" data-toggle="list" href="#gallery_figure_gc_pane_bar1_aF_3" role="tab" aria-controls="bar1_aF_3">bar1_aF_3</a>
+
+
+
+</div>
+</div>
+</div>
+
+<p class="name_fig"><strong>Fig.3 A/T/G/C Distribution</strong></p>
+<p class="premark">The base position is on the horizontal axis and the single base percentage is on the vertical axis</p>
+<!------------------------------------------------------------------------------------------------------------>
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="Results of Raw Data Filtering">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h4>1.4 Results of Raw Data Filtering</h4>
+<p class="paragraph">The sequenced reads (raw reads) often contain low quality reads and adapters, which will affect the analysis quality. So it's necessary to filter the raw reads and get the clean reads. The filtering process is as follows:</p>
+<p class="paragraph">(1) Remove reads containing adapters.</p>
+<p class="paragraph">(2) Remove reads containing N > 10% (N represents the base cannot be determined).</p>
+<p class="paragraph">(3) Remove reads containing low quality (Qscore<= 5) base which is over 50% of the total base.</p>
+
+<p style="font-weight: bold;">Sequences of adapter</p>
+
+
+<p class="paragraph">&nbsp 5' Adapter:</p>
+<p class="paragraph">&nbsp 5'-AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT-3'</p>
+<p class="paragraph">&nbsp 3' Adapter:</p>
+<p class="paragraph">&nbsp 5'-GATCGGAAGAGCACACGTCTGAACTCCAGTCACGGATGACTATCTCGTATGCCGTCTTCTGCTTG-3'</p>
+
+
+
+<p class="paragraph">The Sequencing data filtration of this project can be seen in <strong>Fig.4</strong> :</p>
+
+<p class="center">
+<div class="row gallery-row">
+<div class="col-1">
+<div id="gallery_figure_C_button_prev" class="button_prev" onclick="prev(this.id)"><svg viewbox="0 0 16000 16000" class="svg_prev"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="8789.5,4902.8 8789.5,5846.4 6801.7,8000 8789.5,10253.6 8789.5,11097.2 5930.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-6">
+<div class="tab-content" id="gallery_figure_C_nav-tabContent">
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpo41_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpo41_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpo41_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpo41_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpo41_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpo41_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpo41_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpo41_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpo41_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_pho85_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_pho85_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/pho85_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_pho85_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_pho85_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/pho85_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_pho85_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_pho85_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/pho85_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpopho_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpopho_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpopho_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpopho_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpopho_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpopho_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_rpopho_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_rpopho_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/rpopho_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_Pi_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_Pi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_Pi_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_Pi_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_Pi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_Pi_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_Pi_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_Pi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_Pi_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noPi_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noPi_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noPi_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noPi_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noPi_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noPi_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noPi_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noPi_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noPi_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_SD_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_SD_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_SD_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_SD_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_SD_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_SD_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_SD_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_SD_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_SD_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noURA_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noURA_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noURA_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noURA_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noURA_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noURA_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_WT_noURA_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_WT_noURA_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/WT_noURA_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_wN_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_wN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_wN_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_wN_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_wN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_wN_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_wN_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_wN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_wN_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_noN_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_noN_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_noN_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_noN_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_noN_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_noN_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_Pro_noN_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_Pro_noN_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/Pro_noN_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_3.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_aF_1" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_aF_1" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_aF_1.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_aF_2" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_aF_2" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_aF_2.pie3d.png" /></div>
+
+
+
+<div class="tab-pane fade" id="gallery_figure_C_pane_bar1_aF_3" role="tabpanel" aria-labelledby="gallery_figure_C_list_bar1_aF_3" onclick="trans(this.id)"><img class="img-gallery" src="./src/pictures/Pie/bar1_aF_3.pie3d.png" /></div>
+
+
+
+</div>
+</div>
+<div class="col-1">
+<div id="gallery_figure_C_button_next" class="button_next" onclick="next(this.id)"><svg viewbox="0 0 16000 16000" class="svg_next"><circle class="c" cx="8000" cy="8000" r="6080"></circle><polygon class="a" points="7210.5,4902.8 7210.5,5846.4 9198.3,8000 7210.5,10253.6 7210.5,11097.2 10069.5,8000 "></polygon></svg></div>
+</div>
+<div class="col-4">
+<input class="form-control" id="gallery_figure_C_InputList" type="text" placeholder="Search..">
+<div class="list-group" id="gallery_figure_C_list-tab" role="tablist">
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_1" data-toggle="list" href="#gallery_figure_C_pane_WT_1" role="tab" aria-controls="WT_1">WT_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_2" data-toggle="list" href="#gallery_figure_C_pane_WT_2" role="tab" aria-controls="WT_2">WT_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_3" data-toggle="list" href="#gallery_figure_C_pane_WT_3" role="tab" aria-controls="WT_3">WT_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpo41_1" data-toggle="list" href="#gallery_figure_C_pane_rpo41_1" role="tab" aria-controls="rpo41_1">rpo41_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpo41_2" data-toggle="list" href="#gallery_figure_C_pane_rpo41_2" role="tab" aria-controls="rpo41_2">rpo41_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpo41_3" data-toggle="list" href="#gallery_figure_C_pane_rpo41_3" role="tab" aria-controls="rpo41_3">rpo41_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_pho85_1" data-toggle="list" href="#gallery_figure_C_pane_pho85_1" role="tab" aria-controls="pho85_1">pho85_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_pho85_2" data-toggle="list" href="#gallery_figure_C_pane_pho85_2" role="tab" aria-controls="pho85_2">pho85_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_pho85_3" data-toggle="list" href="#gallery_figure_C_pane_pho85_3" role="tab" aria-controls="pho85_3">pho85_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpopho_1" data-toggle="list" href="#gallery_figure_C_pane_rpopho_1" role="tab" aria-controls="rpopho_1">rpopho_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpopho_2" data-toggle="list" href="#gallery_figure_C_pane_rpopho_2" role="tab" aria-controls="rpopho_2">rpopho_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_rpopho_3" data-toggle="list" href="#gallery_figure_C_pane_rpopho_3" role="tab" aria-controls="rpopho_3">rpopho_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_Pi_1" data-toggle="list" href="#gallery_figure_C_pane_WT_Pi_1" role="tab" aria-controls="WT_Pi_1">WT_Pi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_Pi_2" data-toggle="list" href="#gallery_figure_C_pane_WT_Pi_2" role="tab" aria-controls="WT_Pi_2">WT_Pi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_Pi_3" data-toggle="list" href="#gallery_figure_C_pane_WT_Pi_3" role="tab" aria-controls="WT_Pi_3">WT_Pi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noPi_1" data-toggle="list" href="#gallery_figure_C_pane_WT_noPi_1" role="tab" aria-controls="WT_noPi_1">WT_noPi_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noPi_2" data-toggle="list" href="#gallery_figure_C_pane_WT_noPi_2" role="tab" aria-controls="WT_noPi_2">WT_noPi_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noPi_3" data-toggle="list" href="#gallery_figure_C_pane_WT_noPi_3" role="tab" aria-controls="WT_noPi_3">WT_noPi_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_SD_1" data-toggle="list" href="#gallery_figure_C_pane_WT_SD_1" role="tab" aria-controls="WT_SD_1">WT_SD_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_SD_2" data-toggle="list" href="#gallery_figure_C_pane_WT_SD_2" role="tab" aria-controls="WT_SD_2">WT_SD_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_SD_3" data-toggle="list" href="#gallery_figure_C_pane_WT_SD_3" role="tab" aria-controls="WT_SD_3">WT_SD_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noURA_1" data-toggle="list" href="#gallery_figure_C_pane_WT_noURA_1" role="tab" aria-controls="WT_noURA_1">WT_noURA_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noURA_2" data-toggle="list" href="#gallery_figure_C_pane_WT_noURA_2" role="tab" aria-controls="WT_noURA_2">WT_noURA_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_WT_noURA_3" data-toggle="list" href="#gallery_figure_C_pane_WT_noURA_3" role="tab" aria-controls="WT_noURA_3">WT_noURA_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_wN_1" data-toggle="list" href="#gallery_figure_C_pane_Pro_wN_1" role="tab" aria-controls="Pro_wN_1">Pro_wN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_wN_2" data-toggle="list" href="#gallery_figure_C_pane_Pro_wN_2" role="tab" aria-controls="Pro_wN_2">Pro_wN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_wN_3" data-toggle="list" href="#gallery_figure_C_pane_Pro_wN_3" role="tab" aria-controls="Pro_wN_3">Pro_wN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_noN_1" data-toggle="list" href="#gallery_figure_C_pane_Pro_noN_1" role="tab" aria-controls="Pro_noN_1">Pro_noN_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_noN_2" data-toggle="list" href="#gallery_figure_C_pane_Pro_noN_2" role="tab" aria-controls="Pro_noN_2">Pro_noN_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_Pro_noN_3" data-toggle="list" href="#gallery_figure_C_pane_Pro_noN_3" role="tab" aria-controls="Pro_noN_3">Pro_noN_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_1" data-toggle="list" href="#gallery_figure_C_pane_bar1_1" role="tab" aria-controls="bar1_1">bar1_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_2" data-toggle="list" href="#gallery_figure_C_pane_bar1_2" role="tab" aria-controls="bar1_2">bar1_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_3" data-toggle="list" href="#gallery_figure_C_pane_bar1_3" role="tab" aria-controls="bar1_3">bar1_3</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_aF_1" data-toggle="list" href="#gallery_figure_C_pane_bar1_aF_1" role="tab" aria-controls="bar1_aF_1">bar1_aF_1</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_aF_2" data-toggle="list" href="#gallery_figure_C_pane_bar1_aF_2" role="tab" aria-controls="bar1_aF_2">bar1_aF_2</a>
+
+
+
+<a class="list-group-item list-group-item-action" id="gallery_figure_C_list_bar1_aF_3" data-toggle="list" href="#gallery_figure_C_pane_bar1_aF_3" role="tab" aria-controls="bar1_aF_3">bar1_aF_3</a>
+
+
+
+</div>
+</div>
+</div>
+
+<p class="name_fig"><strong>Fig.4 Composition of Raw Data</strong></p>
+<p class="premark">Different color for different components: </p>
+<p class="premark">(1)Adapter related: (reads containing adapter) / (total raw reads)</p>
+<p class="premark">(2)Containing N: (reads with more than 10% N) / (total raw reads)</p>
+<p class="premark">(3)Low quality: (reads of low quality) / (total raw reads)</p>
+<p class="premark">(4)Clean reads: (clean reads) / (total raw reads)</p>
+
+</p>
+<!------------------------------------------------------------------------------------------------------------>
+<p class="head"><a href="#home" title = "返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="测序数据信息汇总">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h3>2 Summary of Sequencing Data Information</h3>
+<p class="paragraph">The total output of data on the sequencer: Raw data 254.8 G.
+
+<p class="paragraph">The detail statistics for the quality of sequencing data are shown in <strong>Table 1</strong>.</p>
+<p class="name_table"><p class="center"><strong>Table 1 Data Quality Summary</strong></p>
+<p class="center">
+<div style="overflow-x: auto">
+<table class="gy">
+<thead><tr><th>Sample</th><th>Raw reads</th><th>Raw data</th><th>Effective(%)</th><th>Error(%)</th><th>Q20(%)</th><th>Q30(%)</th><th>GC(%)</th></tr></thead>
+<tbody>
+
+	<tr><td>WT_1</td><td>49017688</td><td>7.4</td><td>98.19</td><td>0.02</td><td>98.20</td><td>94.50</td><td>41.28</td></tr>
+
+	<tr><td>WT_2</td><td>47143346</td><td>7.1</td><td>97.90</td><td>0.02</td><td>98.27</td><td>94.67</td><td>41.24</td></tr>
+
+	<tr><td>WT_3</td><td>47186992</td><td>7.1</td><td>97.85</td><td>0.02</td><td>98.21</td><td>94.54</td><td>41.20</td></tr>
+
+	<tr><td>rpo41_1</td><td>44389864</td><td>6.7</td><td>97.67</td><td>0.02</td><td>98.24</td><td>94.58</td><td>41.20</td></tr>
+
+	<tr><td>rpo41_2</td><td>43545486</td><td>6.5</td><td>97.90</td><td>0.02</td><td>98.16</td><td>94.38</td><td>41.30</td></tr>
+
+	<tr><td>rpo41_3</td><td>47190432</td><td>7.1</td><td>98.40</td><td>0.02</td><td>98.40</td><td>95.03</td><td>41.30</td></tr>
+
+	<tr><td>pho85_1</td><td>47616770</td><td>7.1</td><td>98.39</td><td>0.02</td><td>98.16</td><td>94.39</td><td>41.17</td></tr>
+
+	<tr><td>pho85_2</td><td>42708016</td><td>6.4</td><td>98.34</td><td>0.02</td><td>98.19</td><td>94.50</td><td>41.31</td></tr>
+
+	<tr><td>pho85_3</td><td>43294510</td><td>6.5</td><td>97.92</td><td>0.03</td><td>97.95</td><td>93.78</td><td>41.33</td></tr>
+
+	<tr><td>rpopho_1</td><td>51245176</td><td>7.7</td><td>98.18</td><td>0.02</td><td>98.28</td><td>94.75</td><td>41.22</td></tr>
+
+	<tr><td>rpopho_2</td><td>39565716</td><td>5.9</td><td>98.00</td><td>0.03</td><td>97.96</td><td>93.85</td><td>41.26</td></tr>
+
+	<tr><td>rpopho_3</td><td>49036936</td><td>7.4</td><td>97.51</td><td>0.02</td><td>98.57</td><td>95.48</td><td>41.16</td></tr>
+
+	<tr><td>WT_Pi_1</td><td>69182192</td><td>10.4</td><td>97.56</td><td>0.02</td><td>98.34</td><td>94.87</td><td>41.12</td></tr>
+
+	<tr><td>WT_Pi_2</td><td>47072124</td><td>7.1</td><td>97.32</td><td>0.02</td><td>98.33</td><td>94.85</td><td>41.09</td></tr>
+
+	<tr><td>WT_Pi_3</td><td>44659308</td><td>6.7</td><td>97.22</td><td>0.03</td><td>97.91</td><td>93.78</td><td>41.22</td></tr>
+
+	<tr><td>WT_noPi_1</td><td>44630672</td><td>6.7</td><td>97.85</td><td>0.02</td><td>98.31</td><td>94.76</td><td>41.24</td></tr>
+
+	<tr><td>WT_noPi_2</td><td>52036012</td><td>7.8</td><td>98.35</td><td>0.02</td><td>98.16</td><td>94.36</td><td>41.39</td></tr>
+
+	<tr><td>WT_noPi_3</td><td>43829794</td><td>6.6</td><td>98.13</td><td>0.02</td><td>98.23</td><td>94.56</td><td>41.36</td></tr>
+
+	<tr><td>WT_SD_1</td><td>40544484</td><td>6.1</td><td>97.77</td><td>0.02</td><td>98.08</td><td>94.26</td><td>40.96</td></tr>
+
+	<tr><td>WT_SD_2</td><td>52603050</td><td>7.9</td><td>98.03</td><td>0.02</td><td>98.34</td><td>94.83</td><td>40.94</td></tr>
+
+	<tr><td>WT_SD_3</td><td>43296294</td><td>6.5</td><td>98.00</td><td>0.02</td><td>98.17</td><td>94.42</td><td>41.06</td></tr>
+
+	<tr><td>WT_noURA_1</td><td>44196968</td><td>6.6</td><td>98.34</td><td>0.02</td><td>98.32</td><td>94.84</td><td>41.50</td></tr>
+
+	<tr><td>WT_noURA_2</td><td>46159084</td><td>6.9</td><td>98.33</td><td>0.02</td><td>98.33</td><td>94.86</td><td>41.50</td></tr>
+
+	<tr><td>WT_noURA_3</td><td>47738664</td><td>7.2</td><td>98.25</td><td>0.02</td><td>98.21</td><td>94.55</td><td>41.51</td></tr>
+
+	<tr><td>Pro_wN_1</td><td>52818972</td><td>7.9</td><td>97.55</td><td>0.02</td><td>98.40</td><td>95.05</td><td>41.09</td></tr>
+
+	<tr><td>Pro_wN_2</td><td>50220732</td><td>7.5</td><td>98.03</td><td>0.02</td><td>98.41</td><td>95.06</td><td>41.13</td></tr>
+
+	<tr><td>Pro_wN_3</td><td>46414894</td><td>7.0</td><td>98.07</td><td>0.02</td><td>98.37</td><td>94.93</td><td>41.09</td></tr>
+
+	<tr><td>Pro_noN_1</td><td>49542562</td><td>7.4</td><td>97.81</td><td>0.02</td><td>98.35</td><td>94.89</td><td>41.01</td></tr>
+
+	<tr><td>Pro_noN_2</td><td>47636938</td><td>7.1</td><td>97.67</td><td>0.02</td><td>98.28</td><td>94.70</td><td>41.06</td></tr>
+
+	<tr><td>Pro_noN_3</td><td>48749568</td><td>7.3</td><td>98.41</td><td>0.02</td><td>98.26</td><td>94.65</td><td>41.26</td></tr>
+
+	<tr><td>bar1_1</td><td>46555576</td><td>7.0</td><td>97.85</td><td>0.02</td><td>98.48</td><td>95.26</td><td>41.12</td></tr>
+
+	<tr><td>bar1_2</td><td>45125924</td><td>6.8</td><td>97.51</td><td>0.03</td><td>97.84</td><td>93.80</td><td>40.88</td></tr>
+
+	<tr><td>bar1_3</td><td>48948254</td><td>7.3</td><td>98.47</td><td>0.02</td><td>98.29</td><td>94.72</td><td>41.00</td></tr>
+
+	<tr><td>bar1_aF_1</td><td>44028052</td><td>6.6</td><td>98.37</td><td>0.02</td><td>98.15</td><td>94.51</td><td>40.74</td></tr>
+
+	<tr><td>bar1_aF_2</td><td>44528610</td><td>6.7</td><td>98.32</td><td>0.03</td><td>98.08</td><td>94.08</td><td>40.66</td></tr>
+
+	<tr><td>bar1_aF_3</td><td>46117092</td><td>6.9</td><td>97.78</td><td>0.02</td><td>98.46</td><td>95.17</td><td>40.59</td></tr>
+
+</tbody>
+</table>
+</div>
+</p>
+<p class="tremark">Sample: sample name<br />
+Raw reads: total amount of reads of raw data, each four lines taken as one unit. For paired-end sequencing, it equals the amount of read1 and read2, otherwise it equals the amount of read1 for single-end sequencing.<br />
+Raw data: (Raw reads) * (sequence length), calculating in G. For paired-end sequencing like PE150, sequencing length equals 150, otherwise it equals 50 for sequencing like SE50.<br />
+Effective: (Clean reads/Raw reads)*100%<br />
+Error: base error rate<br />
+Q20, Q30: (Base count of Phred value > 20 or 30) / (Total base count)<br />
+GC: (G & C base count) / (Total base count)<br />
+</p>
+<p class="head"><a href="#home" title="返回首页"><img class="logo" align="left" src="src/images/logo.png" /></a>
+<a name="part1">Novogene Co., Ltd</a>
+<hr />
+</p><br />
+<h2>C. Appendix</h2>
+<h3>1 Introduction of Sequencing Data Format</h3>
+<p class="paragraph">The original raw data from Illumina platform are transformed to Sequenced Reads, known as Raw Data or RAW Reads, by base calling. Raw data are recorded in a FASTQ file, which contains sequencing reads and corresponding sequencing quality. Every read in FASTQ format is stored in four lines, as indicated below (Cock P.J.A. et al. 2010):</p>
+
+<p class="seq">
+@HWI-ST1276:71:C1162ACXX:1:1101:1208:2458 1:N:0:CGATGT&nbsp;&nbsp;&nbsp;<br />
+NAAGAACACGTTCGGTCACCTCAGCACACTTGTGAATGTCATGGGATCCAT<br />
++<br />
+#55???BBBBB?BA@DEEFFCFFHHFFCFFHHHHHHHFAE0ECFFD/AEHH<br />
+</p>
+<p class="paragraph">Line 1 begins with a '@' character and is followed by the Illumina Sequence Identifiers and an optional description. The details of Illumina sequence identifier are listed in the table below. </P>
+<table class="gy">
+<tr><th>Identifier</th><th>Meaning</th></tr>
+<tr><td>HWI-ST1276</td><td>Instrument – unique identifier of the sequencer </td></tr>
+<tr><td>71</td><td>Run number – Run number on instrument</td></tr>
+<tr><td>C1162ACXX</td><td>Flow Cell ID – ID of flow cell</td></tr>
+<tr><td>1</td><td>Lane Number – positive integer</td></tr>
+<tr><td>1101</td><td>Tile Number – positive integer</td></tr>
+<tr><td>1208</td><td>X – x coordinate of the spot. Integer which can be negative</td></tr>
+<tr><td>2458</td><td>Y – y coordinate of the spot. Integer which can be negative</td></tr>
+<tr><td>1</td><td>Read number. 1 can be single read or Read 2 of paired-end.</td></tr>
+<tr><td>N</td><td>Y if the read is filtered (did not pass), N otherwise.</td></tr>
+<tr><td>0</td><td>Control number - 0 when none of the control bits are on, otherwise it is an even number</td></tr>
+<tr><td>CGATGT</td><td>Illumina index sequences</td></tr>
+</table>
+
+<p class="paragraph">Line 2 is the raw sequence of the read. </p>
+<p class="paragraph">Line 3 begins with a '+' character and is optionally followed by the same sequence identifiers and descriptions as in Line 1. </p>
+<p class="paragraph">Line 4 encodes the quality values for the bases in Line 2 and contains the same number of characters as the bases in the read (Cock, 2009.).</p>
+<br />
+<h3>2 Explanation of Sequencing Data Related</h3>
+<p class="paragraph">(1) The data delivered is a compressed file in format of '.fq.gz'. Before data delivery, we will calculate the md5 value of each compressed file and
+please check it when you get the data. There are two ways to check the md5 value. In Linux environment, you can use 'md5sum -c <*md5.txt>' command under the data directory. In Windows environment, you can use 
+a calibration tool e.g. hashmyfiles. If the md5 value of compressed file doesn't match with the one we provide in md5 file in data directory, the file may have been damaged during the transmitting procedure.<br />
+
+<p class="paragraph">(2) For paired-end (PE) sequencing, every sample should have 2 data flies (read1 file and read2 file). These 2 files have the same line number, you could use 'wc -l' command to check the line number in Linux environment.
+ The line number divide by 4 is the number of reads.<br />
+
+<p class="paragraph">(3) The data size is the space occupied by the data in the hard disk. It's related to the format of the disk and compression ratio. And it has no influence on the quantity of sequenced bases. 
+Thus, the size of read1 file may be unequal to the size of read2 file.<br />
+
+<p class="paragraph">(4) When customer’s samples need large amount of data e.g. whole genome sequencing data, we would use separate-lane sequencing strategy to make sure the quality of data, so it's possible that one sample has several parts sequencing data. 
+For example, if sample 1 has two read1 files, sample1_L1_1.fq.gz and sample1_L2_1.fq.gz, that means this sample was sequenced on different lanes.<br />
+
+<p class="paragraph">(5) If we agree to deliver the clean data before the project starts, we will filter the data strictly according to the standard to obtain high quality clean data which can be used for further research and paper writing. We will discard the paired reads in the following situation: when either one read contains adapter contamination; when either one read contains more than 10 percent uncertain nucleotides; when either one read contains more than 50 percent low quality nucleotides (base quality less than 5). The data analysis results based on the clean data that is filtered by this standard can be approved by high level magazines (Yan L.Y. et al . 2013). If you want to get more information, please refer to the official website of Novogene (www.novogene.com). <br />
+
+<p class="paragraph">(6) The Index is normally in the middle of the adapter during the process of experiment and sequencing except the special library. We can get the Read1 sequence and Read2 sequence according to the Index read. They are all the sequence of samples so that it's no necessary to dispose the beginning and end of reads in the downstream analysis (e.g. mapping). <br />
+
+<p class="paragraph">(7) 30 days after the data delivery, we will delete outdated data. So please keep your data properly. If you have any questions or concerns, please contact us as soon as possible.<br />
+<br />
+<h3>3 References</h3>
+<p class=ref>
+Cock P.J.A. et al (2010). The Sanger FASTQ file format for sequences with quality scores, and the Solexa/Illumina FASTQ variants. Nucleic acids research 38, 1767-1771. <br /><br />
+Hansen K.D. et al (2010). Biases in Illumina transcriptome sequencing caused by random hexamer priming. Nucleic acids research 38, e131-e131. <br /><br />
+Erlich Y.et al (2008). Alta-Cyclic: a self-optimizing base caller for next-generation sequencing.Nature Methods,5,679-682.  <br /><br />
+Jiang L.C. et al (2011). Synthetic spike-in standards for RNA-seq experiments. Genome research 21, 1543-1551. <br /><br />
+Yan L.Y. et al (2013). Single-cell RNA-Seq profiling of human preimplantation embryos and embryonic stem cells. Nat Struct Mol Biol. <br /><br />
+</p>
+</body>
+</html>
+
